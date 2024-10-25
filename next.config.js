@@ -12,6 +12,8 @@ const isProd = process.env.NODE_ENV === 'production';
 module.exports = {
   assetPrefix: isProd ? '/Portfolio/' : '',
   basePath: isProd ? '/Portfolio' : '',
+  output: 'export',
+  trailingSlash: true,
   exportPathMap: async function () {
     return {
       '/': { page: '/' },
