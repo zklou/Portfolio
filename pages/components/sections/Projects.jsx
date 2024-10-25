@@ -161,23 +161,36 @@ const Projects = () => {
           </div>
         </div>
       </div>
-
       {/* 2nd proj */}
       <div className='relative mt-8 border-0'>
         <div className='relative border-0'>
-          <Image src="/media/projects/blindcoding/blindcoding2.png" alt="" width={300} height={200} className='relative z-30 transition duration-300 ease-in-out -translate-x-1/2 border-0 cursor-pointer left-1/2 lg:hover:opacity-0' />
-          <Image src="/media/projects/blindcoding/blindcoding3.png" alt="" width={300} height={200} className='absolute top-0 z-20 -translate-x-1/2 border-0 sm1:hidden lg:block left-1/2' />
+          <Image
+            src="/media/projects/blindcoding/blindcoding2.png"
+            alt=""
+            width={300}
+            height={200}
+            className='relative z-30 transition duration-300 ease-in-out -translate-x-1/2 border-0 cursor-pointer left-1/2 lg:hover:opacity-0'
+          />
+          <Image
+            src="/media/projects/blindcoding/blindcoding3.png"
+            alt=""
+            width={300}
+            height={200}
+            className='absolute top-0 z-20 -translate-x-1/2 border-0 sm1:hidden lg:block left-1/2'
+          />
           <div className='absolute top-0 z-40 text-4xl font-extrabold text-white text-center sm1:text-6xl md:text-7xl lowercase tracking-tight border-0 w-fit h-fit p-0 leading-[4rem] mt-24 left-1/2 -translate-x-1/2'>02.</div>
-          <Lottie animationData={sketch} className='absolute top-0 mt-64 -rotate-45 md:block sm1:hidden invert grayscale left-1/2' />
+          <Lottie
+            animationData={sketch}
+            className='absolute top-0 mt-64 -rotate-45 md:block sm1:hidden invert grayscale left-1/2'
+          />
         </div>
         <div className='relative flex mt-0 border-0 sm1:flex-col lg:flex-row'>
-          <div className='mt-8 border-0 sm1:w-full lg:w-1/2'>
-            <Lottie animationData={blindcoding} className="overflow-hidden border-0 pt-36 sm1:hidden lg:flex h-fit rounded-3xl invert-0" loop={true} />
-          </div>
           <div className='bg-cover border-0 sm1:w-full lg:w-1/2'>
             <div className='m-auto mt-16 mb-16 text-white border-0 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 rounded-3xl bg-black/20 backdrop-filter backdrop-blur-sm'>
               <div className='flex justify-between'>
-                <p className='text-5xl font-extrabold underline underline-offset-8'>Blind <span className='text-gray-400'>Coding&nbsp;</span></p>
+                <p className='text-5xl font-extrabold underline underline-offset-8'>
+                  Blind <span className='text-gray-400'>Coding&nbsp;</span>
+                </p>
                 <a href={'https://github.com/anantJjain/ReverseCoding'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
                   <div className='pt-2'>
                     <span className="text-4xl"><FaGithub /></span>
@@ -195,8 +208,16 @@ const Projects = () => {
               </div>
             </div>
           </div>
+          <div className='mt-8 border-0 sm1:w-full lg:w-1/2'>
+            <Lottie
+              animationData={blindcoding}
+              className="overflow-hidden border-0 pt-36 sm1:hidden lg:flex h-fit rounded-3xl invert-0"
+              loop={true}
+            />
+          </div>
         </div>
       </div>
+
 
       {/* 3rd proj */}
       <div className='relative mt-8 border-0'>
