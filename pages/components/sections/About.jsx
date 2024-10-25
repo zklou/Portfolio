@@ -33,10 +33,6 @@ const About = () => {
 
     return (
         <div className='bg-[#000] text-white'>
-            <div className='w-2/3 m-auto border-0 border-red-500 md:text-sm sm1:text-xs fontwt'>
-                <div className='border-0 border-red-500 xl:w-1/5 sm1:w-4/5 md:w-2/5'>Available for full time & remote jobs/internships after</div>
-                <div className='mt-2 font-bold text-blue-400 border-0 border-red-500 sm1:text-sm md:text-lg'>{formattedDate} Today</div>
-            </div>
             <motion.div
                 className="font-extrabold leading-[4rem] tracking-tighter text-10xl text-white mt-10 whitespace-nowrap uppercase"
                 style={{ x: toRight }}
@@ -68,20 +64,26 @@ const About = () => {
                 viewport={{ once: true }}
                 ref={imageRef}
             >
-                <div className='sm1:bg-blue-400 md:bg-blue-400 w-fit md:p-10'>
+            </motion.div>
+            <motion.div
+                style={{ y: toUp }}
+                className='w-2/3 m-auto border-0 border-red-500 md:mt-20 sm1:mt-10'
+            >
+                 <div className='sm1:bg-blue-400 md:bg-blue-400 w-fit md:p-10'>
                     <Lottie
                         animationData={about}
                         className="grayscale-0"
                         loop={true}
                     />
                 </div>
-            </motion.div>
-            <motion.div
-                style={{ y: toUp }}
-                className='w-2/3 m-auto border-0 border-red-500 md:mt-20 sm1:mt-10'
-            >
+                
                 <div className='border-0 border-red-500 xl:w-1/3 sm1:w-full sm1:text-sm md:text-md md:w-2/3'>
-                With a Bachelor&apos;s in Computer Science from York University and experience at Yongtai Quanwei Decor Ltd., I&apos;ve built scalable systems using React, Spring Cloud, and AWS, optimized APIs, and implemented microservices architectures, delivering enhanced performance and security. Currently pursuing a Master&apos;s at Georgia Tech to deepen my expertise.
+                    With a Bachelor&apos;s in Computer Science from York University and experience at Yongtai Quanwei Decor Ltd., I&apos;ve built scalable systems using React, Spring Cloud, and AWS, optimized APIs, and implemented microservices architectures, delivering enhanced performance and security. Currently pursuing a Master&apos;s at Georgia Tech to deepen my expertise.
+                </div>
+
+                <div className='w-2/3 m-auto border-0 border-red-500 md:text-sm sm1:text-xs fontwt'>
+                    <div className='border-0 border-red-500 xl:w-1/5 sm1:w-4/5 md:w-2/5'>Available for full time & remote jobs/internships after</div>
+                    <div className='mt-2 font-bold text-blue-400 border-0 border-red-500 sm1:text-sm md:text-lg'>{formattedDate} Today</div>
                 </div>
             </motion.div>
             <div className='mt-24'>
@@ -98,6 +100,7 @@ const About = () => {
                         <div>I have recently completed my Bachelor&apos;s degree in Computer Science from York University, Toronto, and am pursuing my Master&apos;s degree at Georgia Institute of Technology. I have experience working as a full stack developer, contributing to projects involving React, Spring Cloud, AWS, and more.</div>
                         <div className='md:mt-12 sm1:mt-4'>In my professional experience, I have developed over 25 APIs, implemented efficient front-end systems, and optimized backend services for startups and companies like Yongtai Quanwei Decor Ltd. I focus on creating scalable and reliable systems for online services and web applications.</div>
                     </div>
+
                 </div>
             </div>
             <div className='lg:pb-80'>
