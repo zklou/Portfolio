@@ -22,4 +22,7 @@ module.exports = {
       // '/contact': { page: '/contact' },
     };
   },
+  images: {
+    unoptimized: true, // 禁用图片优化
+  },
 };
