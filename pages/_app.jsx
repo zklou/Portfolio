@@ -1,56 +1,63 @@
 import Head from 'next/head'
-import { useState,useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import '../styles/globals.css'
-import { Noto_Sans } from 'next/font/google' 
+import { Noto_Sans } from 'next/font/google'
 import { motion } from 'framer-motion'
 import Layout from './components/layout/Layout'
 import Loader from './components/layout/Loader'
 
 const notoSans = Noto_Sans({
-  weight: ['300','400','500','600','700','800','900'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin-ext']
 })
 
 const MyApp = ({ Component, pageProps }) => {
-  const [ loading,setLoading ] = useState(true)
+  const [loading, setLoading] = useState(true)
   useEffect(() => {
-    setTimeout(() => setLoading(false),8000)
+    setTimeout(() => setLoading(false), 8000)
   })
-  if(Component.getLayout){
-    return(
+  if (Component.getLayout) {
+    return (
       <>
         <Head>
-          <title>Anant Jain | Portfolio </title>
+          <title>Zhengkun Lou | Portfolio</title>
+          <meta name="description" content="Welcome to Zhengkun Lou's portfolio. A showcase of skills, projects, and professional experiences." />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Component {...pageProps } className="overflow-hidden" />
+        <Component {...pageProps} className="overflow-hidden" />
       </>
-    ) 
+    )
   }
 
-  return(
-        <>
-          <Head>
-              <title>Anant Jain | Portfolio </title>
-          </Head>
-          {
-            loading ? 
-              <>
-                <Loader />
-              </>
-              : 
-              <>
-                <Layout>
-                  <motion.div 
-                    initial={{ opacity:0 }}
-                    whileInView={{ opacity:1,transition:{ type:'spring',duration:1 } }}
-                    className={`${notoSans.className} overflow-hidden bg-[#000] relative`}
-                  >
-                    <Component {...pageProps}/>
-                  </motion.div>
-                </Layout>
-              </>
-          }
-        </> 
-  )}
+  return (
+    <>
+      <Head>
+        <title>Zhengkun Lou | Portfolio</title>
+        <meta name="description" content="Welcome to Zhengkun Lou's portfolio. A showcase of skills, projects, and professional experiences." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      {
+        loading ?
+          <>
+            <Loader />
+          </>
+          :
+          <>
+            <Layout>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1, transition: { type: 'spring', duration: 1 } }}
+                className={`${notoSans.className} overflow-hidden bg-[#000] relative`}
+              >
+                <Component {...pageProps} />
+              </motion.div>
+            </Layout>
+          </>
+      }
+    </>
+  )
+}
 
-  export default MyApp
+export default MyApp
