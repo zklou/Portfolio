@@ -81,7 +81,7 @@ const About = () => {
                 className='w-2/3 m-auto border-0 border-red-500 md:mt-20 sm1:mt-10'
             >
                 <div className='border-0 border-red-500 xl:w-1/3 sm1:w-full sm1:text-sm md:text-md md:w-2/3'>
-                    I am a self-taught full stack web developer with expertise in creating digital interfaces, websites, and backend systems. I have the ability to bring those concepts to life using various technologies like React, Spring Cloud, and AWS.
+                With a Bachelor&apos;s in Computer Science from York University and experience at Yongtai Quanwei Decor Ltd., I&apos;ve built scalable systems using React, Spring Cloud, and AWS, optimized APIs, and implemented microservices architectures, delivering enhanced performance and security. Currently pursuing a Master&apos;s at Georgia Tech to deepen my expertise.
                 </div>
             </motion.div>
             <div className='mt-24'>
