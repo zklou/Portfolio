@@ -53,19 +53,19 @@ const About = () => {
                 <div className='w-full md:w-1/2 p-4'>
                     <Lottie
                         animationData={about}
-                        className="grayscale-0"
+                        className="grayscale"
                         loop={true}
                     />
                 </div>
                 
                 {/* 右侧：文本内容 */}
                 <div className='w-full md:w-1/2 p-4'>
-                    <div className='mb-4'>
+                    <div className='mb-4 text-gray-300'>
                         With a Bachelor&apos;s in Computer Science from York University and experience at Yongtai Quanwei Decor Ltd., I&apos;ve built scalable systems using React, Spring Cloud, and AWS, optimized APIs, and implemented microservices architectures, delivering enhanced performance and security. Currently pursuing a Master&apos;s at Georgia Tech to deepen my expertise.
                     </div>
                     <div className='mt-8'>
-                        <div>Available for full-time & remote jobs/internships after</div>
-                        <div className='mt-2 font-bold text-blue-400'>{formattedDate} Today</div>
+                        <div className='text-gray-400'>Available for full-time & remote jobs/internships after</div>
+                        <div className='mt-2 font-bold text-white'>{formattedDate} Today</div>
                     </div>
                 </div>
             </motion.div>

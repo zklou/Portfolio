@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[155],{1890:function(n,_,u){(window.__NEXT_P=window.__NEXT_P||[]).push(["/components/sections/SkillsCarousel",function(){return u(5074)}])}},function(n){n.O(0,[675,742,74,774,888,179],function(){return n(n.s=1890)}),_N_E=n.O()}]);

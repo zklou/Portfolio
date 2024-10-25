@@ -55,8 +55,8 @@ const Scroll = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className='relative flex w-full overflow-hidden border-0 border-red-500 lg:pt-40 parent'>
-      <div className='overflow-hidden border-0 border-gray-500 lg:w-3/5 sm3:w-full'>
+    <div ref={containerRef} className='relative flex w-full overflow-hidden border-0 lg:pt-40'>
+      <div className='overflow-hidden lg:w-3/5 sm3:w-full'>
         {scrollData.map((screen, i) => (
           <motion.div
             key={i}
@@ -69,7 +69,7 @@ const Scroll = () => {
               screen={screen} 
               i={i} 
               setCurrentImage={setCurrentImage} 
-              className='border-0 border-blue-400'
+              className='border-0'
             />
             <div>
               <Image 
@@ -84,9 +84,9 @@ const Scroll = () => {
           </motion.div>
         ))}
       </div>
-      <div className={`sm1:hidden lg:flex fixed top-20 lg:right-0 md:right-2 w-2/5 border-0 border-green-500 h-fit flex justify-around ${view ? 'visible' :'not-visible'}`}>
+      <div className={`sm1:hidden lg:flex fixed top-20 lg:right-0 md:right-2 w-2/5 h-fit flex justify-around ${view ? 'visible' :'not-visible'}`}>
         <div className='h-full xl:w-80 rounded-xl lg:w-80'>
-          <div className='p-2 bg-stone-950 rounded-3xl'>
+          <div className='p-2 bg-stone-900 rounded-3xl'>
             <div className='h-full overflow-hidden bg-black rounded-3xl box-shadow-in'>
               <div className='w-2/5 p-3 m-auto mt-2 box-shadow-out rounded-3xl'></div>
               <Image 
