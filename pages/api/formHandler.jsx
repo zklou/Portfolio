@@ -7,14 +7,14 @@ export default function handler(req, res) {
     port:465, //for SMTP communications
     host:'smtp.gmail.com',
     auth:{
-      user:'dummyemailportfolio@gmail.com',
+      user:'Zhengkunlou@gmail.com',
       pass:password
     },
     secure:true
   })
   const mailData = {
     from:req.body.email,
-    to:'f20200641@pilani.bits-pilani.ac.in',
+    to:'Zhengkunlou@gmail.com',
     subject:`New message from ${req.body.name}`,
     text:`via ${req.body.email} ${req.body.message}`
   }

@@ -165,14 +165,14 @@ const Projects = () => {
       <div className='relative mt-8 border-0'>
         <div className='relative border-0'>
           <Image
-            src="/media/projects/blindcoding/blindcoding2.png"
+            src="./media/projects/blindcoding/blindcoding2.png"
             alt=""
             width={300}
             height={200}
             className='relative z-30 transition duration-300 ease-in-out -translate-x-1/2 border-0 cursor-pointer left-1/2 lg:hover:opacity-0'
           />
           <Image
-            src="/media/projects/blindcoding/blindcoding3.png"
+            src="./media/projects/blindcoding/blindcoding3.png"
             alt=""
             width={300}
             height={200}
