@@ -159,8 +159,8 @@ const ContactNew = () => {
                         <div className='flex flex-row space-x-4 sm1:hidden md:flex'>
                           <div className='text-gray-400 rounded-full md:p-3 sm1:p-2 sm1:text-2xl lg:text-4xl md:text-5xl bg-gray-600/30'><FaGraduationCap /></div>
                           <div className='leading-[1rem]'>
-                            <p className='sm1:text-sm md:text-lg'>zhengkunlou@gmail.com</p>
-                            <p className='sm1:text-xs md:text-sm text-gray-500'>Personal Email</p>
+                            <p className='sm1:text-sm md:text-lg'>zklou@yorku.ca</p>
+                            <p className='sm1:text-xs md:text-sm text-gray-500'>University Email</p>
                           </div>
                         </div>
                       </a>
