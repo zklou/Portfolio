@@ -165,14 +165,14 @@ const Projects = () => {
       <div className='relative mt-8 border-0'>
         <div className='relative border-0'>
           <Image
-            src="./media/projects/blindcoding/blindcoding2.png"
+            src="./media/projects/dnf/dnf1.png"
             alt=""
             width={300}
             height={200}
             className='relative z-30 transition duration-300 ease-in-out -translate-x-1/2 border-0 cursor-pointer left-1/2 lg:hover:opacity-0'
           />
           <Image
-            src="./media/projects/blindcoding/blindcoding3.png"
+            src="./media/projects/dnf/dnf2.png"
             alt=""
             width={300}
             height={200}
@@ -189,7 +189,7 @@ const Projects = () => {
             <div className='m-auto mt-16 mb-16 text-white border-0 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 rounded-3xl bg-black/20 backdrop-filter backdrop-blur-sm'>
               <div className='flex justify-between'>
                 <p className='text-5xl font-extrabold underline underline-offset-8'>
-                  Blind <span className='text-gray-400'>Coding&nbsp;</span>
+                  DNF <span className='text-gray-400'>Server Web</span>
                 </p>
                 <a href={'https://github.com/onlyGuo/dnf-server-web-public'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
                   <div className='pt-2'>
@@ -198,19 +198,21 @@ const Projects = () => {
                 </a>
               </div>
               <p className='mt-12'>
-                Blind Coding is a flagship event held in APOGEE (2023), the annual technical fest of BITS Pilani. This web app served as the hub for a 2-hour coding event where participants deciphered problems through output files without directly seeing the problem statement. It hosted over 100 participants, providing easy access to required files and links to the HackerRank contest.
+                DNF Server Web is a backend management platform built with Node.js and Express, designed to efficiently handle and display game data. The project includes API design, user authentication, and role management, providing administrators with powerful tools for game data management and analysis.
               </p>
               <p className='mt-10 text-2xl font-extrabold text-gray-400'>Tech stack used :</p>
               <div className='flex flex-wrap mt-4 -ml-2 space-x-2 space-y-2'>
-                <p className='p-2 mt-2 ml-2 text-white bg-gray-600/30 rounded-xl'>React.js</p>
-                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Python</p>
-                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Vanilla CSS</p>
+                <p className='p-2 mt-2 ml-2 text-white bg-gray-600/30 rounded-xl'>Node.js</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Express</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>MongoDB</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>JWT</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>EJS</p>
               </div>
             </div>
           </div>
           <div className='mt-8 border-0 sm1:w-full lg:w-1/2'>
             <Lottie
-              animationData={blindcoding}
+              animationData={dnfAnimation} // Replace this with the actual Lottie JSON animation file for DNF Server Web
               className="overflow-hidden border-0 pt-36 sm1:hidden lg:flex h-fit rounded-3xl invert-0"
               loop={true}
             />
@@ -218,22 +220,27 @@ const Projects = () => {
         </div>
       </div>
 
+
       {/* 3rd proj */}
       <div className='relative mt-8 border-0'>
         <div className='relative border-0'>
-          <Image src="./media/projects/optistock/optistock2.png" alt="" width={300} height={200} className='relative z-30 transition duration-300 ease-in-out -translate-x-1/2 border-0 cursor-pointer left-1/2 lg:hover:opacity-0' />
-          <Image src="./media/projects/optistock/optistock1.png" alt="" width={300} height={200} className='absolute top-0 z-20 -translate-x-1/2 border-0 sm1:hidden lg:block left-1/2' />
+          <Image src="./media/projects/coldeye/coldeye1.png" alt="" width={300} height={200} className='relative z-30 transition duration-300 ease-in-out -translate-x-1/2 border-0 cursor-pointer left-1/2 lg:hover:opacity-0' />
+          <Image src="./media/projects/coldeye/coldeye2.png" alt="" width={300} height={200} className='absolute top-0 z-20 -translate-x-1/2 border-0 sm1:hidden lg:block left-1/2' />
           <div className='absolute top-0 z-40 text-4xl font-extrabold text-white text-center sm1:text-6xl md:text-7xl lowercase tracking-tight border-0 w-fit h-fit p-0 leading-[4rem] mt-24 left-1/2 -translate-x-1/2'>03.</div>
           <Lottie animationData={sketch} className='absolute top-0 mt-64 -rotate-45 md:block sm1:hidden invert grayscale left-1/2' />
         </div>
         <div className='relative flex mt-0 border-0 sm1:flex-col lg:flex-row'>
           <div className='mt-8 border-0 sm1:w-full lg:w-1/2'>
-            <Lottie animationData={optistock} className="overflow-hidden border-0 pt-36 sm1:hidden lg:flex h-fit rounded-3xl invert-0" loop={true} />
+            <Lottie
+              animationData={coldEyeAnimation} // Replace this with the actual Lottie JSON animation file for Cold Eye
+              className="overflow-hidden border-0 pt-36 sm1:hidden lg:flex h-fit rounded-3xl invert-0"
+              loop={true}
+            />
           </div>
           <div className='bg-cover border-0 sm1:w-full lg:w-1/2'>
             <div className='m-auto mt-16 mb-16 text-white border-0 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 rounded-3xl bg-black/20 backdrop-filter backdrop-blur-sm'>
               <div className='flex justify-between'>
-                <p className='text-5xl font-extrabold underline underline-offset-8'>Opti<span className='text-gray-400'>Stock</span></p>
+                <p className='text-5xl font-extrabold underline underline-offset-8'>Cold <span className='text-gray-400'>Eye</span></p>
                 <a href={'https://github.com/xyueji/cold-eye'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
                   <div className='pt-2'>
                     <span className="text-4xl"><FaGithub /></span>
@@ -241,22 +248,21 @@ const Projects = () => {
                 </a>
               </div>
               <p className='mt-12'>
-                OptiStock is a comprehensive inventory management solution built with the MERN stack. It supports seamless user authentication using JWT, allowing users to manage inventory with ease. The app leverages Redux for efficient state management, making it a powerful tool for businesses looking to streamline their inventory processes.
+                Cold Eye is a real-time monitoring and data visualization platform designed to track and analyze system performance. Built with Vue.js and D3.js, it provides a clear and intuitive interface for administrators to monitor system health and quickly identify performance bottlenecks.
               </p>
               <p className='mt-10 text-2xl font-extrabold text-gray-400'>Tech stack used :</p>
               <div className='flex flex-wrap mt-4 -ml-2 space-x-2 space-y-2'>
-                <p className='p-2 mt-2 ml-2 text-white bg-gray-600/30 rounded-xl'>React</p>
-                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Tailwind</p>
-                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Node</p>
+                <p className='p-2 mt-2 ml-2 text-white bg-gray-600/30 rounded-xl'>Vue.js</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>D3.js</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Node.js</p>
                 <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Express</p>
-                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Nodemailer</p>
-                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Redux</p>
                 <p className='p-2 text-white bg-gray-600/30 rounded-xl'>MongoDB</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   )
 }
