@@ -198,13 +198,15 @@ const Projects = () => {
                 </a>
               </div>
               <p className='mt-12'>
-                Blind Coding is a flagship event held in APOGEE (2023), the annual technical fest of BITS Pilani. This web app served as the hub for a 2-hour coding event where participants deciphered problems through output files without directly seeing the problem statement. It hosted over 100 participants, providing easy access to required files and links to the HackerRank contest.
+                DNF Server Web is a backend management platform built with Node.js and Express, designed to efficiently handle and display game data. The project includes API design, user authentication, and role management, providing administrators with powerful tools for game data management and analysis.
               </p>
               <p className='mt-10 text-2xl font-extrabold text-gray-400'>Tech stack used :</p>
               <div className='flex flex-wrap mt-4 -ml-2 space-x-2 space-y-2'>
-                <p className='p-2 mt-2 ml-2 text-white bg-gray-600/30 rounded-xl'>React.js</p>
-                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Python</p>
-                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Vanilla CSS</p>
+                <p className='p-2 mt-2 ml-2 text-white bg-gray-600/30 rounded-xl'>Node.js</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Express</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>MongoDB</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>JWT</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>EJS</p>
               </div>
             </div>
           </div>
@@ -257,8 +259,8 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      </div>
+    </div>
 
-      )
+  )
 }
-      export default Projects;
+export default Projects;
