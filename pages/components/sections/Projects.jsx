@@ -189,7 +189,7 @@ const Projects = () => {
             <div className='m-auto mt-16 mb-16 text-white border-0 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 rounded-3xl bg-black/20 backdrop-filter backdrop-blur-sm'>
               <div className='flex justify-between'>
                 <p className='text-5xl font-extrabold underline underline-offset-8'>
-                  Blind <span className='text-gray-400'>Coding&nbsp;</span>
+                  DNF <span className='text-gray-400'>Server Web</span>
                 </p>
                 <a href={'https://github.com/onlyGuo/dnf-server-web-public'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
                   <div className='pt-2'>
@@ -235,7 +235,7 @@ const Projects = () => {
           <div className='bg-cover border-0 sm1:w-full lg:w-1/2'>
             <div className='m-auto mt-16 mb-16 text-white border-0 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 rounded-3xl bg-black/20 backdrop-filter backdrop-blur-sm'>
               <div className='flex justify-between'>
-                <p className='text-5xl font-extrabold underline underline-offset-8'>Opti<span className='text-gray-400'>Stock</span></p>
+                <p className='text-5xl font-extrabold underline underline-offset-8'>Cold <span className='text-gray-400'>Eye</span></p>
                 <a href={'https://github.com/xyueji/cold-eye'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
                   <div className='pt-2'>
                     <span className="text-4xl"><FaGithub /></span>
@@ -243,16 +243,14 @@ const Projects = () => {
                 </a>
               </div>
               <p className='mt-12'>
-                OptiStock is a comprehensive inventory management solution built with the MERN stack. It supports seamless user authentication using JWT, allowing users to manage inventory with ease. The app leverages Redux for efficient state management, making it a powerful tool for businesses looking to streamline their inventory processes.
+                Cold Eye is a real-time monitoring and data visualization platform designed to track and analyze system performance. Built with Vue.js and D3.js, it provides a clear and intuitive interface for administrators to monitor system health and quickly identify performance bottlenecks.
               </p>
               <p className='mt-10 text-2xl font-extrabold text-gray-400'>Tech stack used :</p>
               <div className='flex flex-wrap mt-4 -ml-2 space-x-2 space-y-2'>
-                <p className='p-2 mt-2 ml-2 text-white bg-gray-600/30 rounded-xl'>React</p>
-                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Tailwind</p>
-                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Node</p>
+                <p className='p-2 mt-2 ml-2 text-white bg-gray-600/30 rounded-xl'>Vue.js</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>D3.js</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Node.js</p>
                 <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Express</p>
-                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Nodemailer</p>
-                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Redux</p>
                 <p className='p-2 text-white bg-gray-600/30 rounded-xl'>MongoDB</p>
               </div>
             </div>
