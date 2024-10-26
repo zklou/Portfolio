@@ -113,7 +113,7 @@ const Home = () => {
             deploy deploy deploy ...
           </motion.div>
           <div className="absolute w-4/5 m-auto border-0 top-[2rem] lg:left-[9rem] xl:left-[10rem] md:left-[5rem] z-20">
-            <Image src="./media/images/meformal5.png" alt="Zhengkun Lou" width={700} height={100} className="m-auto transition duration-300 transform grayscale brightness-75" />
+            <Image src="./media/images/meformal.png" alt="Zhengkun Lou" width={700} height={100} className="m-auto transition duration-300 transform grayscale brightness-75" />
           </div>
           <div className="absolute z-40 md:w-1/3 lg:w-1/4 xl:w-1/5 text-sm text-gray-300 md:left-[5rem] md:top-[31.5rem] lg:top-[34.5rem] xl:top-[38rem] xl:left-[10rem] lg:left-[6.5rem] sm3:w-1/2 sm3:top-[20rem] sm3:left-[5rem]">
             I am a passionate and creative  <span className="font-bold text-blue-400">Full Stack Developer</span> with experience in creating highly polished interfaces for the <span className="font-bold text-blue-400">web</span> & mobile.
@@ -143,7 +143,7 @@ const Home = () => {
             </motion.div>
             {/* 重复的 motion.div 按相同方式调整 */}
             <div className="relative z-10 w-full m-auto -ml-4 border-0">
-              <Image src="./media/images/meformal5.png" alt="" width={800} height={100} className="m-auto transition duration-300 transform grayscale brightness-75" />
+              <Image src="./media/images/meformal.png" alt="" width={800} height={100} className="m-auto transition duration-300 transform grayscale brightness-75" />
             </div>
             <div className="absolute z-0 font-extrabold tracking-tighter text-center text-white font-change2 sm1:text-5xl left-3 sm1:top-[14rem] sm2:top-[15rem] sm2:text-6xl sm2:left-0 sm3:left-8">FULLSTACK</div>
             <div className="absolute z-20 font-extrabold tracking-tighter text-center text-white font-change2 font-stencil2 sm1:text-5xl left-3 sm1:top-[14rem] sm2:top-[15rem] sm2:text-6xl sm2:left-0 sm3:left-8">FULLSTACK</div>
