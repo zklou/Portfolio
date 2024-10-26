@@ -116,7 +116,7 @@ const Home = () => {
             <Image src="./media/images/meformal5.png" alt="Zhengkun Lou" width={700} height={100} className="m-auto transition duration-300 transform grayscale brightness-75" />
           </div>
           <div className="absolute z-40 md:w-1/3 lg:w-1/4 xl:w-1/5 text-sm text-gray-300 md:left-[5rem] md:top-[31.5rem] lg:top-[34.5rem] xl:top-[38rem] xl:left-[10rem] lg:left-[6.5rem] sm3:w-1/2 sm3:top-[20rem] sm3:left-[5rem]">
-            I am a passionate and creative <span className="font-bold text-blue-400">Full Stack Developer</span> with experience in creating highly polished interfaces for the <span className="font-bold text-blue-400">web</span> & mobile.
+            I am a passionate and creative  <span className="font-bold text-blue-400">Full Stack Developer</span> with experience in creating highly polished interfaces for the <span className="font-bold text-blue-400">web</span> & mobile.
           </div>
           <div className="absolute z-30 flex space-x-3 lg:top-[35rem] xl:top-[38rem] md:right-8 xl:right-[10rem] md:top-[31rem]">
             <a href="https://github.com/zklou" target="_blank" rel="noreferrer">
