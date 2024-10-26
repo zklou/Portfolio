@@ -191,7 +191,7 @@ const Projects = () => {
                 <p className='text-5xl font-extrabold underline underline-offset-8'>
                   Blind <span className='text-gray-400'>Coding&nbsp;</span>
                 </p>
-                <a href={'https://github.com/anantJjain/ReverseCoding'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
+                <a href={'https://github.com/onlyGuo/dnf-server-web-public'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
                   <div className='pt-2'>
                     <span className="text-4xl"><FaGithub /></span>
                   </div>
@@ -218,7 +218,6 @@ const Projects = () => {
         </div>
       </div>
 
-
       {/* 3rd proj */}
       <div className='relative mt-8 border-0'>
         <div className='relative border-0'>
@@ -235,7 +234,7 @@ const Projects = () => {
             <div className='m-auto mt-16 mb-16 text-white border-0 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 rounded-3xl bg-black/20 backdrop-filter backdrop-blur-sm'>
               <div className='flex justify-between'>
                 <p className='text-5xl font-extrabold underline underline-offset-8'>Opti<span className='text-gray-400'>Stock</span></p>
-                <a href={'https://github.com/anantJjain/OptiStock-Inventory_Management_Software'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
+                <a href={'https://github.com/xyueji/cold-eye'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
                   <div className='pt-2'>
                     <span className="text-4xl"><FaGithub /></span>
                   </div>
@@ -261,4 +260,4 @@ const Projects = () => {
     </div>
   )
 }
-export default Projects
+export default Projects;
