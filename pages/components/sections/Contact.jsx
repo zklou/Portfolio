@@ -96,13 +96,12 @@ const ContactNew = () => {
             <>
               <div className='relative z-10 flex w-10/12 m-auto text-white border-0 lg:flex-row sm1:flex-col'>
                 <div className='sm1:w-full lg:w-3/5'>
-                  <div className='border-0 sm1:text-5xl md:text-9xl sm2:text-6xl sm3:text-7xl lg:text-8xl xl:text-10xl'>
-                    <div className='font-extrabold leading-tight tracking-tighter'>
-                      Let<span className='text-gray-400'>&apos;</span>s <span className='font-stencil2'>work</span>
+                  <div className="border-0 text-center sm1:text-4xl md:text-7xl lg:text-8xl xl:text-9xl">
+                    <div className="font-semibold text-white tracking-tight leading-snug">
+                      Let<span className="text-blue-400">'</span>s work
                     </div>
-                    <div className='font-extrabold leading-tight tracking-tighter sm1:-mt-4 md:-mt-12 lg:-mt-12'>
-                      <span className='sm1:text-5xl md:text-8xl'>— </span>
-                      <span className='text-gray-400'>together</span>
+                    <div className="font-semibold text-white tracking-tight leading-snug md:mt-4 lg:mt-5">
+                      <span className="text-blue-400">— together</span>
                     </div>
                   </div>
                 </div>
@@ -114,7 +113,7 @@ const ContactNew = () => {
                       className='sm1:scale-75 lg:scale-90 lg:mt-10 xl:scale-75 xl:mt-10'
                     />
                   </div>
-                </div>
+                </div>0
               </div>
               <div className='relative z-10 flex w-10/12 m-auto text-white lg:flex-row sm1:flex-col lg:space-x-12'>
                 <div className='sm1:w-full lg:w-4/5 lg:-mt-20 xl:mt-10'>
