@@ -29,7 +29,7 @@ const Contributions = () => {
             <div className="text-5xl font-bold text-blue-400">GA4GH</div>
             <div className="mt-4">
                 The mission of the Global Alliance for Genomics and Health (GA4GH) is to establish frameworks and standards for working with health-related and genomic data. Healthcare practitioners and researchers worldwide rely on this data to make informed decisions and improve treatments. Since the data, tools, and workflows involved are valuable resources, it&apos;s crucial that they can be located, accessed, and reused in a way that is interoperable. The GA4GH standards promote and maintain data principles across the biomedical data exchange and analysis field.
-                <Image className="mt-10" alt="GA4GH logo" src="/media/contributions/ga4gh.png" height={500} width={500}></Image>
+                <Image className="mt-10" alt="GA4GH logo" src="./media/contributions/ga4gh.png" height={500} width={500}></Image>
             </div>
         </div>
         <div className="ml-auto sm1:p-6 xl:w-3/5 md:p-20 lg:w-4/5">
