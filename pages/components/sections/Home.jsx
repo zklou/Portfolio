@@ -147,7 +147,7 @@ const Home = () => {
           </div>
 
           <div className="absolute z-40 w-11/12 text-sm text-gray-300 border-0 top-[28rem] sm3:left-[2rem] sm1:left-[1rem] sm1:hidden">
-            Hello, I'm <span className="font-bold text-blue-400">Zhengkun Lou</span>, a passionate and creative <span className="font-bold text-blue-400">Full Stack Developer</span> with experience in creating highly polished interfaces for the <span className="font-bold text-blue-400">web</span> & mobile.
+            Hello, I'm <span className="font-bold text-blue-400">  Zhengkun Lou</span>, a passionate and creative <span className="font-bold text-blue-400">Full Stack Developer</span> with experience in creating highly polished interfaces for the <span className="font-bold text-blue-400">web</span> & mobile.
           </div>
         </div>
 
