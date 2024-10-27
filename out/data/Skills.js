@@ -2,46 +2,46 @@ export const Skills = [
     {
       id:1,
       name:'React.js',
-      url:'/media/skills/react.png'
+      url:'./media/skills/react.png'
     },
     {
       id:2,
       name:'MongoDB',
-      url:'/media/skills/mongodb.png'
+      url:'./media/skills/mongodb.png'
     },
     {
       id:3,
       name:'Node.js',
-      url:'/media/skills/node.png'
+      url:'./media/skills/node.png'
     },
     {
       id:4,
       name:'Next.js',
-      url:'/media/skills/next.png'
+      url:'./media/skills/next.png'
     },
     {
       id:5,
       name:'Tailwind',
-      url:'/media/skills/tailwind.png'
+      url:'./media/skills/tailwind.png'
     },
     {
       id:6,
       name:'Java',
-      url:'/media/skills/java.png'
+      url:'./media/skills/java.png'
     },
     {
       id:7,
       name:'Redux',
-      url:'/media/skills/redux.png'
+      url:'./media/skills/redux.png'
     },
     {
       id:8,
       name:'HTML',
-      url:'/media/skills/html.png'
+      url:'./media/skills/html.png'
     },
     {
       id:9,
       name:'CSS',
-      url:'/media/skills/css.png'
+      url:'./media/skills/css.png'
     },
   ]
