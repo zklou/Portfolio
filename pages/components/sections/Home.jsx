@@ -97,16 +97,16 @@ const Home = () => {
           </div>
 
           <motion.div style={{ x: toRight3 }} className="tracking-tighter md:top-[24rem] lg:top-[21rem] absolute text-gray-400/30 z-0 overflow-hidden whitespace-nowrap text-8xl font-extrabold font-stencil24">
-            design design design design ...
+            design design design design design design design
           </motion.div>
           <motion.div style={{ x: toRight3 }} className="tracking-tighter md:top-[30rem] lg:top-[28rem] absolute text-gray-400/30 z-0 overflow-hidden whitespace-nowrap text-8xl font-extrabold font-stencil24">
-            code code code code code ...
+            code code code code code code code code code
           </motion.div>
           <motion.div style={{ x: toRight3 }} className="tracking-tighter md:top-[35rem] lg:top-[34.5rem] absolute text-gray-400/30 z-0 overflow-hidden whitespace-nowrap text-8xl font-extrabold font-stencil24">
-            develop develop develop ...
+            develop develop develop develop develop develop
           </motion.div>
           <motion.div style={{ x: toRight3 }} className="tracking-tighter md:top-[42rem] lg:top-[41rem] absolute text-gray-400/30 z-0 overflow-hidden whitespace-nowrap text-8xl font-extrabold font-stencil24">
-            deploy deploy deploy ...
+            deploy deploy deploy deploy deploy deploy
           </motion.div>
 
           <div className="absolute w-4/5 m-auto border-0 top-[2rem] lg:left-[9rem] xl:left-[10rem] md:left-[5rem] z-9">
