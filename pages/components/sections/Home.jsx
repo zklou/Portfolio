@@ -109,7 +109,7 @@ const Home = () => {
             deploy deploy deploy ...
           </motion.div>
 
-          <div className="absolute w-4/5 m-auto border-0 top-[2rem] lg:left-[9rem] xl:left-[10rem] md:left-[5rem] z-20">
+          <div className="absolute w-4/5 m-auto border-0 top-[2rem] lg:left-[9rem] xl:left-[10rem] md:left-[5rem] z-9">
             <Image src="./media/images/meformal.png" alt="Zhengkun Lou" width={700} height={100} className="m-auto transition duration-300 transform grayscale brightness-75" />
           </div>
 
