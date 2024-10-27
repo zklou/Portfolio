@@ -140,7 +140,7 @@ const Home = () => {
               web web web web web web web web web web web web web web web web web web web web
             </motion.div>
             <div className="relative z-10 w-full m-auto -ml-4 border-0">
-              <Image src="./media/images/meformal.png" alt="" width={800} height={100} className="m-auto transition duration-300 transform grayscale brightness-75" />
+              <Image src="./media/images/meformal.png" alt="" width={800} height={100} className="m-auto transition duration-300 transform hover:scale-120 hover:grayscale brightness-75" />
             </div>
             <div className="absolute z-0 font-extrabold tracking-tighter text-center text-white font-change2 sm1:text-5xl left-3 sm1:top-[14rem] sm2:top-[15rem] sm2:text-6xl sm2:left-0 sm3:left-8">FULLSTACK</div>
             <div className="absolute z-20 font-extrabold tracking-tighter text-center text-blue-400 font-change2 sm1:text-5xl left-3 sm1:top-[14rem] sm2:top-[15rem] sm2:text-6xl sm2:left-0 sm3:left-8">WEB DEVELOPER</div>
