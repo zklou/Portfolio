@@ -1,6 +1,7 @@
 import React from 'react'
 import { IoBriefcaseSharp } from "react-icons/io5";
-import Image from 'next/image'
+import Image from 'next/image';
+import { OpenSourceContributions } from '../public/data/Contributions';
 
 const ExperienceItem = ({ title, company, timePeriod, location, description }) => {
     return (
@@ -40,6 +41,16 @@ const Experience = () => {
                 location="Shenyang, China"
                 description="Developed and maintained themes, course modules, and search features, contributing 3000+ lines of JavaScript and PHP code. Rebuilt MySQL database with backend team, improving CURD response time by 15%. Addressed OAuth2 token redirect issues, gained expertise in Laravel and monorepos, and supported seamless user experience for over 1000 users."
             />
+        </div>
+        <div className="font-extrabold tracking-tighter text-center text-blue-400 sm1:text-xl sm1:p-6 md:pl-20 md:text-6xl">
+            Pull Requests
+        </div>
+        <div className="m-auto sm1:p-6 md:p-10 lg:p-20 lg:w-4/5 xl:w-3/5 md:mt-0">
+            {
+                OpenSourceContributions.map( (contri) => (
+                    <Description title={contri.title} status={contri.status} description={contri.description} key={contri.id} link={contri.link}/>
+                ))
+            }
         </div>
     </div>
   )
