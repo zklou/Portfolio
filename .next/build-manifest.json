@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/sfm-lnsFv7R5ZZ6KSPjGK/_buildManifest.js",
-    "static/sfm-lnsFv7R5ZZ6KSPjGK/_ssgManifest.js"
+    "static/c978cLQViiyqd0D3bOf3A/_buildManifest.js",
+    "static/c978cLQViiyqd0D3bOf3A/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "rootMainFilesTree": {},
@@ -29,7 +29,7 @@
       "static/chunks/407-c695b03d3460f62d.js",
       "static/chunks/845-dd9a1cd37b13a5dd.js",
       "static/chunks/357-4ecf17453db4b942.js",
-      "static/chunks/619-0159ed9683d5910d.js",
+      "static/chunks/619-76c79f1c33a1246e.js",
       "static/chunks/pages/index-48c3c9f244d377ac.js"
     ],
     "/404": [
@@ -124,14 +124,14 @@
       "static/chunks/407-c695b03d3460f62d.js",
       "static/chunks/845-dd9a1cd37b13a5dd.js",
       "static/chunks/357-4ecf17453db4b942.js",
-      "static/chunks/619-0159ed9683d5910d.js",
+      "static/chunks/619-76c79f1c33a1246e.js",
       "static/chunks/pages/components/sections/Home-b6331864d01164c6.js"
     ],
     "/components/sections/Parallax": [
       "static/chunks/webpack-d6176615b4ece0ee.js",
       "static/chunks/framework-363bae7ec5ec9684.js",
       "static/chunks/main-3a528c8f4500baa6.js",
-      "static/chunks/pages/components/sections/Parallax-98515600b4bd9e8c.js"
+      "static/chunks/pages/components/sections/Parallax-844af04fabdb7854.js"
     ],
     "/components/sections/Projects": [
       "static/chunks/webpack-d6176615b4ece0ee.js",
