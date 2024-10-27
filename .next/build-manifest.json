@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/_CbwGf8K_m0x-vd6tKo0N/_buildManifest.js",
-    "static/_CbwGf8K_m0x-vd6tKo0N/_ssgManifest.js"
+    "static/PPRp4QP7PaI45RCMIK5uW/_buildManifest.js",
+    "static/PPRp4QP7PaI45RCMIK5uW/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "rootMainFilesTree": {},
@@ -29,7 +29,7 @@
       "static/chunks/407-9f3de9e1d223041b.js",
       "static/chunks/845-dd9a1cd37b13a5dd.js",
       "static/chunks/357-4ecf17453db4b942.js",
-      "static/chunks/619-c7bf4796e613bdb6.js",
+      "static/chunks/619-4289a668acdd647e.js",
       "static/chunks/pages/index-48c3c9f244d377ac.js"
     ],
     "/404": [
@@ -124,7 +124,7 @@
       "static/chunks/407-9f3de9e1d223041b.js",
       "static/chunks/845-dd9a1cd37b13a5dd.js",
       "static/chunks/357-4ecf17453db4b942.js",
-      "static/chunks/619-c7bf4796e613bdb6.js",
+      "static/chunks/619-4289a668acdd647e.js",
       "static/chunks/pages/components/sections/Home-b6331864d01164c6.js"
     ],
     "/components/sections/Parallax": [
