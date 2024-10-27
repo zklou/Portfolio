@@ -155,7 +155,7 @@ const ContactNew = () => {
                 <div className='sm1:w-full lg:w-3/5 lg:mt-96 xl:mt-60 sm1:mt-12 md:mt-28 xl:w-full'>
                   <div className='flex flex-col w-full border-0 sm1:mt-4 md:mt-0 md:space-y-4'>
                     <div className='flex xl:space-x-20 sm1:flex-col xl:flex-row sm1:space-y-2 md:space-y-8 xl:space-y-0'>
-                      <a href="mailto:zhengkunlou@gmail.com">
+                      <a href="mailto:zklou@yorku.ca">
                         <div className='flex flex-row space-x-4 sm1:hidden md:flex'>
                           <div className='text-gray-400 rounded-full md:p-3 sm1:p-2 sm1:text-2xl lg:text-4xl md:text-5xl bg-gray-600/30'><FaGraduationCap /></div>
                           <div className='leading-[1rem]'>

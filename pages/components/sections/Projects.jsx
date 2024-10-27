@@ -165,18 +165,25 @@ const Projects = () => {
       <div className='relative mt-8 border-0'>
         <div className='relative border-0'>
           <Image
-            src="./media/projects/blindcoding/blindcoding2.png"
+            src="./media/projects/blindcoding/DNF1.jpg"
             alt=""
             width={300}
             height={200}
             className='relative z-30 transition duration-300 ease-in-out -translate-x-1/2 border-0 cursor-pointer left-1/2 lg:hover:opacity-0'
           />
           <Image
-            src="./media/projects/blindcoding/blindcoding3.png"
+            src="./media/projects/blindcoding/DNF2.jpg"
             alt=""
             width={300}
             height={200}
             className='absolute top-0 z-20 -translate-x-1/2 border-0 sm1:hidden lg:block left-1/2'
+          />
+          <Image
+            src="./media/projects/blindcoding/DNF3.jpg"
+            alt=""
+            width={300}
+            height={200}
+            className='relative z-30 transition duration-300 ease-in-out -translate-x-1/2 border-0 cursor-pointer left-1/2 lg:hover:opacity-0'
           />
           <div className='absolute top-0 z-40 text-4xl font-extrabold text-white text-center sm1:text-6xl md:text-7xl lowercase tracking-tight border-0 w-fit h-fit p-0 leading-[4rem] mt-24 left-1/2 -translate-x-1/2'>02.</div>
           <Lottie
@@ -223,8 +230,9 @@ const Projects = () => {
       {/* 3rd proj */}
       <div className='relative mt-8 border-0'>
         <div className='relative border-0'>
-          <Image src="./media/projects/optistock/optistock2.png" alt="" width={300} height={200} className='relative z-30 transition duration-300 ease-in-out -translate-x-1/2 border-0 cursor-pointer left-1/2 lg:hover:opacity-0' />
-          <Image src="./media/projects/optistock/optistock1.png" alt="" width={300} height={200} className='absolute top-0 z-20 -translate-x-1/2 border-0 sm1:hidden lg:block left-1/2' />
+          <Image src="./media/projects/optistock/Cold3.png" alt="" width={300} height={200} className='relative z-30 transition duration-300 ease-in-out -translate-x-1/2 border-0 cursor-pointer left-1/2 lg:hover:opacity-0' />
+          <Image src="./media/projects/optistock/Cold2.png" alt="" width={300} height={200} className='relative z-30 transition duration-300 ease-in-out -translate-x-1/2 border-0 cursor-pointer left-1/2 lg:hover:opacity-0' />
+          <Image src="./media/projects/optistock/Cold1.png" alt="" width={300} height={200} className='absolute top-0 z-20 -translate-x-1/2 border-0 sm1:hidden lg:block left-1/2' />
           <div className='absolute top-0 z-40 text-4xl font-extrabold text-white text-center sm1:text-6xl md:text-7xl lowercase tracking-tight border-0 w-fit h-fit p-0 leading-[4rem] mt-24 left-1/2 -translate-x-1/2'>03.</div>
           <Lottie animationData={sketch} className='absolute top-0 mt-64 -rotate-45 md:block sm1:hidden invert grayscale left-1/2' />
         </div>
