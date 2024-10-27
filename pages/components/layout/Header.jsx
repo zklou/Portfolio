@@ -39,8 +39,8 @@ const Header = ({ isOpen, toggleClose, toggleOpen }) => {
           <div className='text-sm'>
             <div><Link href='#about' className="hover:text-gray-300">About</Link></div>
             <div><Link href='#projects' className="hover:text-gray-300">Projects</Link></div>
+            <div><Link scroll={false} href='#contributions' className="hover:text-gray-300">Experience</Link></div>
             <div><Link scroll={false} href='#contact' className="hover:text-gray-300">Contact</Link></div>
-            <div><Link scroll={false} href='#contributions' className="hover:text-gray-300">OSS</Link></div>
           </div>
           <div className='text-sm ml-28'>
             <div><Link href="https://drive.google.com/file/d/1y8MTVHcVBzGro2tO-IWjytsu1rccGKVf/view?usp=sharing" target="_blank" className="hover:text-gray-300">Resume</Link></div>

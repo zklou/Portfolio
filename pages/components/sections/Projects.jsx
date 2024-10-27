@@ -203,20 +203,27 @@ const Projects = () => {
             <div className='m-auto mt-16 mb-16 text-white border-0 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 rounded-3xl bg-black/20 backdrop-filter backdrop-blur-sm'>
               <div className='flex justify-between'>
                 <p className='text-5xl font-extrabold underline underline-offset-8'>
-                  DNF <span className='text-gray-400'>Server Web</span>
+                  AWS Microservice <span className='text-gray-400'>Online Game Platform</span>
                 </p>
-                <a href={'https://github.com/onlyGuo/dnf-server-web-public'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
+                <a href={'https://github.com/zklou/DNF-Server'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
                   <div className='pt-2'>
                     <span className="text-4xl"><FaGithub /></span>
                   </div>
                 </a>
               </div>
               <p className='mt-12'>
-                DNF Server Web is a backend management platform built with Node.js and Express, designed to efficiently handle and display game data. The project includes API design, user authentication, and role management, providing administrators with powerful tools for game data management and analysis.
+                This project involves building a scalable online game platform utilizing AWS microservices. Designed with Spring Cloud and leveraging Kafka for data stream processing, this platform efficiently handles real-time interactions and data analysis, ensuring a seamless gaming experience. Integrated Cloudflare, AWS Shield, and NAT Gateway to enhance security and optimize network performance.
               </p>
               <p className='mt-10 text-2xl font-extrabold text-gray-400'>Tech stack used :</p>
               <div className='flex flex-wrap mt-4 -ml-2 space-x-2 space-y-2'>
-                <p className='p-2 mt-2 ml-2 text-white bg-gray-600/30 rounded-xl'>Node.js</p>
+                <p className='p-2 mt-2 ml-2 text-white bg-gray-600/30 rounded-xl'>Spring Cloud</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Kafka</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Redis</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>AWS EKS</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Cloudflare</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>AWS Shield</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>NAT Gateway</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Node.js</p>
                 <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Express</p>
                 <p className='p-2 text-white bg-gray-600/30 rounded-xl'>MongoDB</p>
                 <p className='p-2 text-white bg-gray-600/30 rounded-xl'>JWT</p>
@@ -251,19 +258,26 @@ const Projects = () => {
           <div className='bg-cover border-0 sm1:w-full lg:w-1/2'>
             <div className='m-auto mt-16 mb-16 text-white border-0 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 rounded-3xl bg-black/20 backdrop-filter backdrop-blur-sm'>
               <div className='flex justify-between'>
-                <p className='text-5xl font-extrabold underline underline-offset-8'>Cold <span className='text-gray-400'>Eye</span></p>
-                <a href={'https://github.com/xyueji/cold-eye'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
+                <p className='text-5xl font-extrabold underline underline-offset-8'>Cloudflare <span className='text-gray-400'>Cold Chain</span></p>
+                <a href={'https://github.com/zklou/coldChainManage'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
                   <div className='pt-2'>
                     <span className="text-4xl"><FaGithub /></span>
                   </div>
                 </a>
               </div>
               <p className='mt-12'>
-                Cold Eye is a real-time monitoring and data visualization platform designed to track and analyze system performance. Built with Vue.js and D3.js, it provides a clear and intuitive interface for administrators to monitor system health and quickly identify performance bottlenecks.
+                This microservice-driven cold chain platform leverages Cloudflare, AWS Shield, and NAT Gateway for secure and efficient cold chain transportation. The system monitors temperature, humidity, and power levels in real-time using a React and Spring Cloud stack, with robust data aggregation and alerting pipelines.
               </p>
               <p className='mt-10 text-2xl font-extrabold text-gray-400'>Tech stack used :</p>
               <div className='flex flex-wrap mt-4 -ml-2 space-x-2 space-y-2'>
-                <p className='p-2 mt-2 ml-2 text-white bg-gray-600/30 rounded-xl'>Vue.js</p>
+                <p className='p-2 mt-2 ml-2 text-white bg-gray-600/30 rounded-xl'>React</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Spring Cloud</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Kafka</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>AWS EKS</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Cloudflare</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>AWS Shield</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>NAT Gateway</p>
+                <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Vue.js</p>
                 <p className='p-2 text-white bg-gray-600/30 rounded-xl'>D3.js</p>
                 <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Node.js</p>
                 <p className='p-2 text-white bg-gray-600/30 rounded-xl'>Express</p>
@@ -273,6 +287,8 @@ const Projects = () => {
           </div>
         </div>
       </div>
+
+
     </div>
 
   )
