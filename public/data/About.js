@@ -16,11 +16,11 @@ export const scrollData = [
     imgUrl: './media/images/coding2.gif',
   },
   {
-    "id": "3",
-    "heading1": "beyond",
-    "heading2": "the screen",
-    "maskText": "Nature, Music & Adventure :)",
-    "description": "When I'm not coding, you’ll likely find me outdoors, carving down snowy slopes or relaxing by the water with a fishing rod in hand. I’m passionate about creating unique soundscapes using tools like Max 8, merging technology with art. Sci-fi films and quality time with friends also keep me inspired and energized, preparing me for the next big project.",
-    "imgUrl": "./media/images/beyond3.gif"
+    id: "3",
+    heading1: "beyond",
+    heading2: "the screen",
+    maskText: "Nature, Music & Adventure :)",
+    description: "When I'm not coding, you’ll likely find me outdoors, carving down snowy slopes or relaxing by the water with a fishing rod in hand. I’m passionate about creating unique soundscapes using tools like Max 8, merging technology with art. Sci-fi films and quality time with friends also keep me inspired and energized, preparing me for the next big project.",
+    imgUrl: "./media/images/beyond3.gif"
   }
 ]  

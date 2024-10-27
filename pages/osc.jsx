@@ -40,7 +40,7 @@ const Contributions = () => {
             {/* <Image alt="elixir-logo" src="/media/contributions/elixir-aai.png" height={500} width={300}></Image> */}
         </div>
         <div className="font-extrabold tracking-tighter text-center text-blue-400 sm1:text-xl sm1:p-6 md:pl-20 md:text-6xl">
-            Pull Requests
+            Past Work On
         </div>
         <div className="m-auto sm1:p-6 md:p-10 lg:p-20 lg:w-4/5 xl:w-3/5 md:mt-0">
             {

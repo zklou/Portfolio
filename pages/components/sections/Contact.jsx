@@ -113,7 +113,7 @@ const ContactNew = () => {
                       className='sm1:scale-75 lg:scale-90 lg:mt-10 xl:scale-75 xl:mt-10'
                     />
                   </div>
-                </div>0
+                </div>
               </div>
               <div className='relative z-10 flex w-10/12 m-auto text-white lg:flex-row sm1:flex-col lg:space-x-12'>
                 <div className='sm1:w-full lg:w-4/5 lg:-mt-20 xl:mt-10'>
