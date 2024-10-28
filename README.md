@@ -1,85 +1,83 @@
-以下是生成的 `README.md` 文件代码：
+Here's the `README.md` file in English:
 
 ```markdown
 # Portfolio
 
 [![Website](https://img.shields.io/badge/Portfolio-Live-blue)](https://zklou.github.io/Portfolio/)
 
-这是一个展示个人作品的项目，通过现代化的前端技术和精美的设计，为用户呈现简洁、易用的作品展示平台。
+This project is a personal portfolio website, showcasing a collection of my work with a modern and visually appealing design. It provides a simple and user-friendly platform to display my skills and projects.
 
-## 预览
+## Live Preview
 
-在线预览：[https://zklou.github.io/Portfolio/](https://zklou.github.io/Portfolio/)
+View it live at: [https://zklou.github.io/Portfolio/](https://zklou.github.io/Portfolio/)
 
-## 功能介绍
+## Features
 
-- **自我介绍**：简要介绍个人信息、技能和背景。
-- **项目展示**：展示过往的项目，支持图片轮播和链接跳转。
-- **社交链接**：链接到 GitHub、LinkedIn、Instagram 等社交平台。
-- **动画效果**：悬停时的图片放大、灰度转换等互动效果。
+- **Introduction**: A brief overview of my background, skills, and experience.
+- **Project Showcase**: Highlights past projects with image carousel and links for more information.
+- **Social Links**: Links to GitHub, LinkedIn, Instagram, and other platforms.
+- **Animation Effects**: Interactive effects like image scaling and grayscale on hover.
 
-## 技术栈
+## Tech Stack
 
-- **前端**：React, Tailwind CSS, Framer Motion
-- **动画**：Lottie
-- **部署**：GitHub Pages
+- **Frontend**: React, Tailwind CSS, Framer Motion
+- **Animation**: Lottie
+- **Deployment**: GitHub Pages
 
-## 本地运行
+## Running Locally
 
-如果想在本地运行此项目，请按照以下步骤操作：
+To run this project locally, follow these steps:
 
-1. 克隆项目到本地：
+1. Clone the repository:
    ```bash
    git clone https://github.com/zklou/Portfolio.git
    ```
-2. 进入项目目录：
+2. Navigate to the project directory:
    ```bash
    cd Portfolio
    ```
-3. 安装依赖项：
+3. Install dependencies:
    ```bash
    npm install
    ```
-4. 启动开发服务器：
+4. Start the development server:
    ```bash
    npm start
    ```
 
-   服务器启动后，您可以在浏览器中访问 `http://localhost:3000` 查看项目。
+   After starting, you can view the project at `http://localhost:3000` in your browser.
 
-## 项目结构
+## Project Structure
 
 ```plaintext
 Portfolio/
-├── public/                 # 静态资源
+├── public/                 # Static assets
 ├── src/
-│   ├── components/         # 可重用组件
-│   ├── pages/              # 页面组件
-│   ├── assets/             # 图片、Lottie 动画等资源
-│   └── App.js              # 主要应用文件
-├── package.json            # 项目信息和依赖项
-└── README.md               # 项目说明文件
+│   ├── components/         # Reusable components
+│   ├── pages/              # Page components
+│   ├── assets/             # Images, Lottie animations, etc.
+│   └── App.js              # Main application file
+├── package.json            # Project info and dependencies
+└── README.md               # Project documentation
 ```
 
-## 部署
+## Deployment
 
-该项目部署在 GitHub Pages 上。若要将更改推送到 GitHub Pages，请执行以下命令：
+This project is deployed on GitHub Pages. To push updates to GitHub Pages, run:
 
 ```bash
 npm run deploy
 ```
 
-## 贡献
+## Contributions
 
-欢迎对项目提出建议和贡献代码。如果您发现问题或希望添加新功能，请提交 `Issue` 或创建 `Pull Request`。
+Contributions are welcome! If you find any issues or have ideas for new features, feel free to open an `Issue` or submit a `Pull Request`.
 
-## 联系
+## Contact
 
-如果您对该项目有任何疑问或建议，请通过以下方式联系我：
+If you have any questions or suggestions regarding this project, feel free to reach out:
 
 - GitHub: [@zklou](https://github.com/zklou)
 - LinkedIn: [Zhengkun Lou](https://www.linkedin.com/in/zhengkun-lou/)
 
 ```
-
----
