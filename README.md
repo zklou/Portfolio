@@ -4,7 +4,7 @@
 
 [![Website](https://img.shields.io/badge/Portfolio-Live-blue)](https://zklou.github.io/Portfolio/)
 
-Welcome to my personal portfolio! This project serves as a creative showcase of my skills, experience, and projects, designed with modern aesthetics and interactive elements to provide a seamless and engaging experience for visitors. 
+Welcome to my personal portfolio! This project serves as a creative showcase of my skills, experience, and projects, designed with modern aesthetics and interactive elements to provide a seamless and engaging experience for visitors.
 
 ## 🌐 Live Demo
 
@@ -44,11 +44,11 @@ To run this project on your local machine, follow these steps:
    npm start
    ```
 
-   Once the server is running, open your browser and visit `http://localhost:3000` to view the project.
+Once the server is running, open your browser and visit `http://localhost:3000` to view the project.
 
 ## 📁 Project Structure
 
-```plaintext
+```
 Portfolio/
 ├── public/                 # Static assets (e.g., icons, public images)
 ├── src/
@@ -82,3 +82,6 @@ Have questions, feedback, or collaboration ideas? Let’s connect!
 ---
 
 Thank you for stopping by! 🌟 Your feedback and support help me improve and grow. Enjoy exploring my portfolio!
+```
+
+---
