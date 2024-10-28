@@ -48,7 +48,7 @@ Once the server is running, open your browser and visit `http://localhost:3000` 
 
 ## 📁 Project Structure
 
-```
+```plaintext
 Portfolio/
 ├── public/                 # Static assets (e.g., icons, public images)
 ├── src/
@@ -83,5 +83,3 @@ Have questions, feedback, or collaboration ideas? Let’s connect!
 
 Thank you for stopping by! 🌟 Your feedback and support help me improve and grow. Enjoy exploring my portfolio!
 ```
-
----
