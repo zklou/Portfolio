@@ -1,5 +1,3 @@
-Here's the `README.md` file in English:
-
 ```markdown
 # Portfolio
 
