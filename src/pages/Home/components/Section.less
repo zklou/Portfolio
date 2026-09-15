@@ -1,11 +1,24 @@
+// Scope 内部靠 height:100% 撑开圆形取景区域，section 必须给出确定高度
+// （而非 min-height），否则百分比高度解析不到，取景框会直接塌陷成 0
 .section {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: clamp(520px, 78vh, 760px);
-  padding: 60px 24px;
+  height: clamp(320px, 42vh, 440px);
+  padding: 56px 24px;
   background: #f4ecd8;
+}
+
+// 内容纵向堆叠较多时（如项目卡片在窄屏下变成单列）用这个变体给够高度
+.sectionTall {
+  height: clamp(620px, 100vh, 900px);
+}
+
+@media (min-width: 900px) {
+  .sectionTall {
+    height: clamp(400px, 52vh, 560px);
+  }
 }
 
 .panel {
