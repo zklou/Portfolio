@@ -4,21 +4,30 @@ import styles from './Projects.less';
 import Section from './Section';
 
 const Projects: React.FC = () => (
-  <Section label="PROJECTS · 作品" wide tall>
-    <div className={styles.grid}>
+  <Section
+    label="PROJECTS · 作品"
+    heading="Selected Work"
+    theme="dusk"
+    wide
+    tall
+  >
+    <div className={styles.list}>
       {PROJECTS.map((project, index) => (
         <a
           key={project.title}
           href={project.link}
           target="_blank"
           rel="noreferrer"
-          className={styles.card}
+          className={styles.entry}
         >
-          <span className={styles.cardIndex}>
-            {String(index + 1).padStart(2, '0')}.
+          <span className={styles.index}>
+            {String(index + 1).padStart(2, '0')}
           </span>
-          <h3 className={styles.cardTitle}>{project.title}</h3>
-          <p className={styles.cardDesc}>{project.desc}</p>
+          <span className={styles.body}>
+            <h3 className={styles.title}>{project.title}</h3>
+            <p className={styles.desc}>{project.desc}</p>
+          </span>
+          <span className={styles.arrow}>↗</span>
         </a>
       ))}
     </div>

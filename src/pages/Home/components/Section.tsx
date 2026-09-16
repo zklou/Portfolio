@@ -3,27 +3,48 @@ import useInView from '@/hooks/useInView';
 import React from 'react';
 import styles from './Section.less';
 
+export type SectionTheme = 'paper' | 'ink' | 'dusk' | 'sky';
+
 interface Props {
   label: string;
+  heading: string;
+  theme?: SectionTheme;
   wide?: boolean;
-  /** 内容较多（如多张卡片纵向堆叠）时给区块更高的高度，避免内容被裁切 */
   tall?: boolean;
-  children: React.ReactNode;
+  children: React.ReactNode | ((active: boolean) => React.ReactNode);
 }
 
-// 滚动到视口时，取景框虹膜展开露出该区块内容——把“望远镜”动效延续到正文里
-const Section: React.FC<Props> = ({ label, wide, tall, children }) => {
+const themeClassMap: Record<SectionTheme, string> = {
+  paper: styles.themePaper,
+  ink: styles.themeInk,
+  dusk: styles.themeDusk,
+  sky: styles.themeSky,
+};
+
+// 滚动到视口时，取景框虹膜展开露出该区块内容——把"望远镜"动效延续到正文里
+// 每个区块换一种主题色，呼应视频里从暗室到黄昏天空的色彩旅程
+const Section: React.FC<Props> = ({
+  label,
+  heading,
+  theme = 'paper',
+  wide,
+  tall,
+  children,
+}) => {
   const [ref, inView] = useInView<HTMLDivElement>();
 
   return (
     <section
       ref={ref}
-      className={`${styles.section} ${tall ? styles.sectionTall : ''}`}
+      className={`${styles.section} ${themeClassMap[theme]} ${
+        tall ? styles.sectionTall : ''
+      }`}
     >
-      <Scope open={inView} size={160}>
+      <Scope open={inView} size={180}>
         <div className={`${styles.panel} ${wide ? styles.panelWide : ''}`}>
           <span className={styles.label}>{label}</span>
-          {children}
+          <h2 className={styles.heading}>{heading}</h2>
+          {typeof children === 'function' ? children(inView) : children}
         </div>
       </Scope>
     </section>

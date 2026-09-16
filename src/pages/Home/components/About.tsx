@@ -4,7 +4,7 @@ import styles from './About.less';
 import Section from './Section';
 
 const About: React.FC = () => (
-  <Section label="ABOUT · 关于我">
+  <Section label="ABOUT · 关于我" heading="About Me" theme="ink">
     <p className={styles.text}>{ABOUT_TEXT}</p>
   </Section>
 );

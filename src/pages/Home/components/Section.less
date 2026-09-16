@@ -5,20 +5,82 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: clamp(320px, 42vh, 440px);
+  height: clamp(360px, 46vh, 480px);
   padding: 56px 24px;
-  background: #f4ecd8;
+  transition: background 0.4s ease;
 }
 
 // 内容纵向堆叠较多时（如项目卡片在窄屏下变成单列）用这个变体给够高度
 .sectionTall {
-  height: clamp(620px, 100vh, 900px);
+  height: clamp(640px, 100vh, 920px);
 }
 
 @media (min-width: 900px) {
   .sectionTall {
-    height: clamp(400px, 52vh, 560px);
+    height: clamp(420px, 54vh, 580px);
   }
+}
+
+// 四种主题对应视频里从暗室到黄昏天空的色彩旅程，
+// 下面的内容组件统一读取这些自定义属性，不再各自写死颜色
+.themePaper {
+  background: #f4ecd8;
+
+  --text: #3a3327;
+  --text-strong: #241f18;
+  --muted: rgb(58 51 39 / 65%);
+  --accent: #a45a63;
+  --accent-strong: #6b4a2a;
+  --label: rgb(43 36 26 / 55%);
+  --tag-bg: rgb(216 178 92 / 12%);
+  --tag-border: rgb(138 109 59 / 40%);
+  --card-bg: rgb(255 255 255 / 35%);
+  --card-border: rgb(138 109 59 / 30%);
+}
+
+.themeInk {
+  background: radial-gradient(circle at 50% 20%, #23201a 0%, #14120f 70%);
+
+  --text: rgb(239 230 211 / 85%);
+  --text-strong: #efe6d3;
+  --muted: rgb(239 230 211 / 55%);
+  --accent: #d8b25c;
+  --accent-strong: #f0cd7e;
+  --label: rgb(239 230 211 / 50%);
+  --tag-bg: rgb(239 230 211 / 8%);
+  --tag-border: rgb(239 230 211 / 25%);
+  --card-bg: rgb(239 230 211 / 6%);
+  --card-border: rgb(239 230 211 / 18%);
+}
+
+.themeDusk {
+  background: linear-gradient(135deg, #e7c9c0 0%, #cdb9cf 45%, #a9c0d8 100%);
+
+  --text: #3a2430;
+  --text-strong: #241522;
+  --muted: rgb(58 36 48 / 65%);
+  --accent: #7a4a63;
+  --accent-strong: #4a2c3d;
+  --label: rgb(58 36 48 / 55%);
+  --tag-bg: rgb(255 255 255 / 25%);
+  --tag-border: rgb(58 36 48 / 25%);
+  --card-bg: rgb(255 255 255 / 30%);
+  --card-border: rgb(58 36 48 / 20%);
+}
+
+.themeSky {
+  background: linear-gradient(180deg, #a9c7de 0%, #dbe4d7 55%, #efe6d3 100%);
+
+  --text: #202a33;
+  --text-strong: #14202a;
+  --muted: rgb(32 42 51 / 65%);
+  --accent: #3d6a8a;
+  --accent-strong: #234258;
+  --label: rgb(32 42 51 / 55%);
+  --tag-bg: rgb(255 255 255 / 30%);
+  --tag-border: rgb(32 42 51 / 25%);
+  --card-bg: rgb(255 255 255 / 35%);
+  --card-border: rgb(32 42 51 / 20%);
 }
 
 .panel {
@@ -37,10 +99,19 @@
 }
 
 .label {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   font-family: Georgia, 'Times New Roman', serif;
   font-style: italic;
   font-size: 12px;
   letter-spacing: 0.28em;
-  color: rgba(43, 36, 26, 55%);
+  color: var(--label);
+}
+
+.heading {
+  margin: 0 0 20px;
+  color: var(--text-strong);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }

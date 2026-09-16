@@ -47,6 +47,17 @@ const Scope: React.FC<ScopeProps> = ({
             </div>
           ))}
         </div>
+        <svg
+          className={styles.reticle}
+          viewBox="0 0 100 100"
+          aria-hidden="true"
+        >
+          <circle cx="50" cy="50" r="45" />
+          <line x1="50" y1="1" x2="50" y2="9" />
+          <line x1="50" y1="91" x2="50" y2="99" />
+          <line x1="1" y1="50" x2="9" y2="50" />
+          <line x1="91" y1="50" x2="99" y2="50" />
+        </svg>
         <div className={styles.chroma} />
         <div className={styles.grain} />
       </div>

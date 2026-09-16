@@ -1,22 +1,22 @@
 import Scope from '@/components/Scope';
 import {
-  BotanicalSlide,
-  ContourSlide,
-  MedallionSlide,
-  SpecimenSlide,
+  BirdSlide,
+  DigitalisSlide,
+  InsectSlide,
+  RoseSlide,
 } from '@/components/Scope/illustrations';
 import React, { useEffect, useState } from 'react';
 import styles from './Hero.less';
 import HeroContent from './HeroContent';
 
 const SLIDES = [
-  <SpecimenSlide key="specimen" />,
-  <BotanicalSlide key="botanical" />,
-  <MedallionSlide key="medallion" />,
-  <ContourSlide key="contour" />,
+  <InsectSlide key="insect" />,
+  <DigitalisSlide key="digitalis" />,
+  <BirdSlide key="bird" />,
+  <RoseSlide key="rose" />,
 ];
 
-const SLIDE_INTERVAL_MS = 1600;
+const SLIDE_INTERVAL_MS = 1900;
 
 const Hero: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
