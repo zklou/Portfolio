@@ -3,29 +3,28 @@
   align-items: center;
   justify-content: space-between;
   padding: 22px 28px;
-  border-top: 1px solid rgb(35 37 58 / 12%);
-  background: var(--paper);
-  color: rgb(35 37 58 / 60%);
-  font-family: var(--mono-font);
-  font-size: 12px;
-  text-transform: uppercase;
+  border-top: 1px solid rgb(43 36 26 / 12%);
+  background: #f4ecd8;
+  color: rgb(58 51 39 / 60%);
+  font-size: 13px;
 }
 
 .heart {
-  color: var(--brand);
+  color: #a45a63;
 }
 
 .name {
-  color: #23253a;
-  font-weight: 700;
+  color: #241f18;
+  font-weight: 600;
 }
 
 .link {
-  color: rgb(35 37 58 / 75%);
-  letter-spacing: 0.06em;
-  transition: color 0.2s ease;
+  display: inline-block;
+  color: rgb(58 51 39 / 75%);
+  transition: color 0.15s var(--ease-snap), transform 0.15s var(--ease-snap);
 }
 
 .link:hover {
-  color: var(--brand);
+  color: #6b4a2a;
+  transform: translateY(-2px);
 }

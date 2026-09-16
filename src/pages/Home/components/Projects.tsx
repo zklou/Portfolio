@@ -6,9 +6,9 @@ import Section from './Section';
 const Projects: React.FC = () => (
   <Section
     id="work"
-    label="03 · WORK"
+    label="03 · WORK · 作品"
     heading="Selected Work"
-    theme="brand"
+    theme="dusk"
     wide
     tall
   >

@@ -5,18 +5,22 @@
 }
 
 .email {
+  display: inline-block;
   color: var(--accent-strong);
-  font-family: var(--mono-font);
-  font-size: 18px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 20px;
   border-bottom: 1px solid var(--card-border);
+  transition: transform 0.15s var(--ease-snap);
+}
+
+.email:hover {
+  transform: translateY(-2px);
 }
 
 .social {
   margin-top: 20px;
   color: var(--muted);
-  font-family: var(--mono-font);
-  font-size: 13px;
-  text-transform: uppercase;
+  font-size: 14px;
 }
 
 .dot {
@@ -24,10 +28,13 @@
 }
 
 .socialLink {
+  display: inline-block;
   color: var(--text);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
+  transition: color 0.15s var(--ease-snap), transform 0.15s var(--ease-snap);
 }
 
 .socialLink:hover {
   color: var(--accent-strong);
+  transform: translateY(-2px);
 }

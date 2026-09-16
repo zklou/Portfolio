@@ -1,11 +1,4 @@
-import bird from '@/assets/scope/bird.jpg';
-import DuotoneImage from '@/components/DuotoneImage';
-import {
-  CONTACT_EMAIL,
-  SITE_NAME,
-  SITE_TAGLINE,
-  SOCIAL_LINKS,
-} from '@/constants';
+import { SITE_NAME, SITE_TAGLINE } from '@/constants';
 import React from 'react';
 import styles from './HeroContent.less';
 
@@ -13,43 +6,48 @@ interface Props {
   visible: boolean;
 }
 
-const github = SOCIAL_LINKS.find((link) => link.label === 'GitHub');
-
-// 望远镜展开后露出的真实场景：品牌蓝底 + 巨字标题 + 大幅单色调版画，
-// 呼应参考站点"大字左 + 版画右"的两栏构图
+// 望远镜展开后露出的真实"天空"场景：渐变天色 + 云 + 枝头小鸟 + 标题
 const HeroContent: React.FC<Props> = ({ visible }) => (
-  <div className={styles.hero}>
-    <div className={`${styles.grid} ${visible ? styles.gridVisible : ''}`}>
-      <div className={styles.copy}>
-        <p className={styles.eyebrow}>PORTFOLIO</p>
-        <h1 className={styles.title}>{SITE_NAME}</h1>
-        <p className={styles.tagline}>{SITE_TAGLINE}</p>
-        <div className={styles.actions}>
-          <a className={styles.button} href={`mailto:${CONTACT_EMAIL}`}>
-            Get in touch
-          </a>
-          {github && (
-            <a
-              className={styles.ghost}
-              href={github.url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub ↗
-            </a>
-          )}
-        </div>
-      </div>
-      <div className={styles.plate}>
-        <DuotoneImage src={bird} position="55% 55%" />
-      </div>
+  <div className={styles.sky}>
+    <div className={styles.cloudA} />
+    <div className={styles.cloudB} />
+    <svg
+      className={styles.branch}
+      viewBox="0 0 400 260"
+      preserveAspectRatio="xMidYMax slice"
+    >
+      <path
+        d="M0 40 C 90 60, 160 90, 220 130 C 270 160, 330 170, 400 150"
+        fill="none"
+        stroke="#5b4a3a"
+        strokeWidth="2"
+      />
+      <path
+        d="M150 78 C 170 55, 190 45, 210 30"
+        fill="none"
+        stroke="#5b4a3a"
+        strokeWidth="1.4"
+      />
+      <path
+        d="M260 145 C 280 120, 300 108, 330 100"
+        fill="none"
+        stroke="#5b4a3a"
+        strokeWidth="1.4"
+      />
+      <ellipse cx="230" cy="122" rx="9" ry="6.5" fill="#3c3a33" />
+      <path d="M221 122 q 9 -6 18 0" fill="#c8d24a" opacity="0.85" />
+    </svg>
+    <div className={`${styles.copy} ${visible ? styles.copyVisible : ''}`}>
+      <p className={styles.eyebrow}>PORTFOLIO</p>
+      <h1 className={styles.title}>{SITE_NAME}</h1>
+      <p className={styles.tagline}>{SITE_TAGLINE}</p>
     </div>
     <div
       className={`${styles.scrollCue} ${
         visible ? styles.scrollCueVisible : ''
       }`}
     >
-      SCROLL ↓
+      向下滚动
     </div>
   </div>
 );

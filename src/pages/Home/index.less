@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap');
-
 :root {
-  --brand: #1b2ce4;
-  --brand-deep: #101a99;
-  --paper: #f1efe6;
-  --display-font: 'Bebas Neue', 'Arial Narrow', sans-serif;
-  --mono-font: 'Space Mono', ui-monospace, 'SF Mono', menlo, monospace;
+  --ease-snap: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:global(html) {
+  scroll-behavior: smooth;
 }
 
 .page {
   position: relative;
-  background: var(--brand);
+  background: #14120f;
 }
 
 // 贯穿全页的细颗粒纹理，把取景框里的胶片质感延续到下面的内容区

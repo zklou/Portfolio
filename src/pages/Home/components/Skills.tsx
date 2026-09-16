@@ -6,9 +6,9 @@ import styles from './Skills.less';
 const Skills: React.FC = () => (
   <Section
     id="skills"
-    label="02 · SKILLS"
+    label="02 · SKILLS · 技能"
     heading="Skills &amp; Tools"
-    theme="light"
+    theme="paper"
   >
     <p className={styles.line}>
       {SKILLS.map((skill, index) => (

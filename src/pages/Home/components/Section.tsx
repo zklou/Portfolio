@@ -3,7 +3,7 @@ import useInView from '@/hooks/useInView';
 import React from 'react';
 import styles from './Section.less';
 
-export type SectionTheme = 'brand' | 'light';
+export type SectionTheme = 'paper' | 'ink' | 'dusk' | 'sky';
 
 interface Props {
   id?: string;
@@ -16,17 +16,19 @@ interface Props {
 }
 
 const themeClassMap: Record<SectionTheme, string> = {
-  brand: styles.themeBrand,
-  light: styles.themeLight,
+  paper: styles.themePaper,
+  ink: styles.themeInk,
+  dusk: styles.themeDusk,
+  sky: styles.themeSky,
 };
 
 // 滚动到视口时，取景框虹膜展开露出该区块内容——把"望远镜"动效延续到正文里
-// 品牌蓝/浅色两种主题交替，呼应参考站点的高对比节奏
+// 每个区块换一种主题色，呼应视频里从暗室到黄昏天空的色彩旅程
 const Section: React.FC<Props> = ({
   id,
   label,
   heading,
-  theme = 'brand',
+  theme = 'paper',
   wide,
   tall,
   children,

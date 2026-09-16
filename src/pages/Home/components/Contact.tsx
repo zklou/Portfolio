@@ -4,7 +4,12 @@ import styles from './Contact.less';
 import Section from './Section';
 
 const Contact: React.FC = () => (
-  <Section id="contact" label="04 · CONTACT" heading="Let's Talk" theme="light">
+  <Section
+    id="contact"
+    label="04 · CONTACT · 联系"
+    heading="Let's Talk"
+    theme="sky"
+  >
     <p className={styles.text}>期待与你聊聊新的项目或合作。</p>
     <a className={styles.email} href={`mailto:${CONTACT_EMAIL}`}>
       {CONTACT_EMAIL}

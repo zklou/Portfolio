@@ -6,25 +6,32 @@ interface Props {
   alt?: string;
   position?: string;
   className?: string;
+  /** true 时套用品牌色单色调+网点，默认走做旧胶片的自然色调 */
+  duotone?: boolean;
 }
 
-// 把彩色扫描件转成"品牌色单色调 + 网点"质感：灰度 + mix-blend-mode:color 上色，
-// 再叠一层细网点做 halftone 印刷感 —— 全部纯 CSS，不需要预处理图片
 const DuotoneImage: React.FC<Props> = ({
   src,
   alt = '',
   position = '50% 50%',
   className,
+  duotone = false,
 }) => (
   <div className={[styles.wrap, className].filter(Boolean).join(' ')}>
     <img
       src={src}
       alt={alt}
-      className={styles.img}
+      className={`${styles.img} ${
+        duotone ? styles.imgDuotone : styles.imgNatural
+      }`}
       style={{ objectPosition: position }}
     />
-    <div className={styles.tint} />
-    <div className={styles.halftone} />
+    {duotone && (
+      <>
+        <div className={styles.tint} />
+        <div className={styles.halftone} />
+      </>
+    )}
   </div>
 );
 

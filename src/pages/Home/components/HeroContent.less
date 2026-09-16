@@ -1,158 +1,99 @@
-.hero {
+.sky {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: var(--brand);
+  background: linear-gradient(
+    180deg,
+    #6f9cc4 0%,
+    #a9c7de 38%,
+    #e7d9c4 78%,
+    #efe6d3 100%
+  );
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  gap: 24px;
+.cloudA,
+.cloudB {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(30px);
+  opacity: 0.8;
+}
+
+.cloudA {
+  top: 18%;
+  left: 6%;
+  width: 46%;
+  height: 18%;
+  background: radial-gradient(ellipse, #fdf6e8 0%, rgb(253 246 232 / 0%) 70%);
+}
+
+.cloudB {
+  right: -10%;
+  bottom: 22%;
+  width: 60%;
+  height: 22%;
+  background: radial-gradient(ellipse, #f3c9b0 0%, rgb(243 201 176 / 0%) 72%);
+}
+
+.branch {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
-  padding: 40px 32px;
-}
-
-@media (min-width: 760px) {
-  .grid {
-    grid-template-columns: 1.1fr 0.9fr;
-    padding: 0 56px;
-  }
+  height: 34%;
+  opacity: 0.9;
 }
 
 .copy {
-  z-index: 1;
-  order: 2;
+  position: absolute;
+  top: 42%;
+  left: 50%;
   text-align: center;
   opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 1s ease 0.4s, transform 1s ease 0.4s;
+  transform: translate(-50%, 10px);
+  transition: opacity 0.7s var(--ease-snap) 0.45s,
+    transform 0.7s var(--ease-snap) 0.45s;
 }
 
-@media (min-width: 760px) {
-  .copy {
-    order: 1;
-    text-align: left;
-  }
-}
-
-.gridVisible .copy {
+.copyVisible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(-50%, 0);
 }
 
 .eyebrow {
-  margin: 0 0 8px;
-  color: rgb(255 255 255 / 65%);
-  font-family: var(--mono-font);
+  margin: 0 0 6px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
   font-size: 12px;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  color: rgb(43 36 26 / 60%);
 }
 
 .title {
   margin: 0;
-  color: #fff;
-  font-family: var(--display-font);
-  font-size: clamp(56px, 11vw, 128px);
-  line-height: 0.95;
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(32px, 6vw, 56px);
+  color: #241f18;
 }
 
 .tagline {
-  max-width: 34ch;
-  margin: 14px 0 0;
-  color: rgb(255 255 255 / 75%);
-  font-size: clamp(14px, 1.6vw, 17px);
-}
-
-@media (min-width: 760px) {
-  .tagline {
-    margin-left: 2px;
-  }
-}
-
-.actions {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  margin-top: 28px;
-}
-
-@media (min-width: 760px) {
-  .actions {
-    justify-content: flex-start;
-  }
-}
-
-.button {
-  padding: 12px 22px;
-  background: #fff;
-  color: var(--brand);
-  font-family: var(--mono-font);
-  font-size: 13px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  transition: opacity 0.2s ease;
-}
-
-.button:hover {
-  opacity: 0.85;
-}
-
-.ghost {
-  padding: 12px 22px;
-  border: 1px solid rgb(255 255 255 / 40%);
-  color: #fff;
-  font-family: var(--mono-font);
-  font-size: 13px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  transition: background 0.2s ease;
-}
-
-.ghost:hover {
-  background: rgb(255 255 255 / 12%);
-}
-
-.plate {
-  z-index: 1;
-  order: 1;
-  overflow: hidden;
-  width: 100%;
-  height: clamp(180px, 32vh, 320px);
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 1s ease 0.6s, transform 1s ease 0.6s;
-}
-
-@media (min-width: 760px) {
-  .plate {
-    order: 2;
-    height: min(64vh, 520px);
-  }
-}
-
-.gridVisible .plate {
-  opacity: 1;
-  transform: translateY(0);
+  margin: 10px 0 0;
+  font-size: clamp(13px, 1.6vw, 16px);
+  color: rgb(36 31 24 / 70%);
 }
 
 .scrollCue {
   position: absolute;
-  bottom: 5%;
+  bottom: 6%;
   left: 50%;
-  color: rgb(255 255 255 / 55%);
-  font-family: var(--mono-font);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.2em;
+  color: rgb(36 31 24 / 55%);
   opacity: 0;
   transform: translateX(-50%);
-  transition: opacity 1s ease 1.3s;
+  transition: opacity 0.6s var(--ease-snap) 1s;
 }
 
 .scrollCueVisible {

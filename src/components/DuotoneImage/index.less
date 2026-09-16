@@ -10,13 +10,22 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+// 做旧胶片色调：贴近视频里那批老扫描件本身的做旧感，是默认表现
+.imgNatural {
+  filter: sepia(18%) saturate(1.05) contrast(1.06) brightness(0.97);
+}
+
+// 品牌色单色调 + 网点（可选，非默认）
+.imgDuotone {
   filter: grayscale(100%) contrast(1.15) brightness(1.05);
 }
 
 .tint {
   position: absolute;
   inset: 0;
-  background: var(--brand);
+  background: var(--brand, #1b2ce4);
   mix-blend-mode: color;
   opacity: 0.92;
 }
