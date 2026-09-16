@@ -5,9 +5,10 @@ import Section from './Section';
 
 const Projects: React.FC = () => (
   <Section
-    label="PROJECTS · 作品"
+    id="work"
+    label="03 · WORK"
     heading="Selected Work"
-    theme="dusk"
+    theme="brand"
     wide
     tall
   >

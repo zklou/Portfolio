@@ -2,6 +2,7 @@ import bird from '@/assets/scope/bird.jpg';
 import digitalis from '@/assets/scope/digitalis.jpg';
 import insect from '@/assets/scope/insect.jpg';
 import rose from '@/assets/scope/rose.jpg';
+import DuotoneImage from '@/components/DuotoneImage';
 import React from 'react';
 import styles from './illustrations.less';
 
@@ -15,12 +16,7 @@ interface PlateProps {
 
 const Plate: React.FC<PlateProps> = ({ src, position, caption }) => (
   <div className={styles.slideBase}>
-    <img
-      src={src}
-      alt=""
-      className={styles.art}
-      style={{ objectPosition: position }}
-    />
+    <DuotoneImage src={src} position={position} />
     <span className={styles.caption}>{caption}</span>
   </div>
 );

@@ -4,7 +4,12 @@ import Section from './Section';
 import styles from './Skills.less';
 
 const Skills: React.FC = () => (
-  <Section label="SKILLS · 技能" heading="Skills &amp; Tools" theme="paper">
+  <Section
+    id="skills"
+    label="02 · SKILLS"
+    heading="Skills &amp; Tools"
+    theme="light"
+  >
     <p className={styles.line}>
       {SKILLS.map((skill, index) => (
         <React.Fragment key={skill}>
