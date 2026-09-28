@@ -1,0 +1,187 @@
+@mono: var(--font-mono);
+@signal: var(--c-accent);
+@ember: var(--c-accent);
+
+.shell {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 18;
+  width: min(760px, 88vw);
+  transform: translate3d(-50%, -50%, 0);
+  opacity: 0;
+  pointer-events: none;
+  font-family: @mono;
+  font-size: 12.5px;
+  line-height: 1.75;
+  // 场景还在后面下雨，玻璃质感比实心底更贴这一章
+  background: color-mix(in srgb, var(--c-bg) 74%, transparent);
+  backdrop-filter: blur(14px);
+  border: 1px solid color-mix(in srgb, var(--c-accent) 16%, transparent);
+  border-radius: 6px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 55%);
+  overflow: hidden;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  border-bottom: 1px solid color-mix(in srgb, var(--c-accent) 12%, transparent);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--c-dim) 90%, transparent);
+}
+
+.dots {
+  flex: none;
+  width: 38px;
+  height: 9px;
+  // 三个窗口按钮，用一条渐变画出来省掉三个空 span
+  background: radial-gradient(
+      circle 4.5px at 4.5px 50%,
+      color-mix(in srgb, var(--c-ink) 22%, transparent) 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle 4.5px at 19px 50%,
+      color-mix(in srgb, var(--c-ink) 22%, transparent) 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle 4.5px at 33.5px 50%,
+      color-mix(in srgb, var(--c-ink) 22%, transparent) 98%,
+      transparent 100%
+    );
+}
+
+.barLabel {
+  flex: 1;
+  color: color-mix(in srgb, var(--c-ink) 60%, transparent);
+}
+
+.barHint {
+  color: color-mix(in srgb, var(--c-accent) 70%, transparent);
+}
+
+.log {
+  max-height: min(46vh, 380px);
+  overflow-y: auto;
+  padding: 16px 20px 6px;
+  overscroll-behavior: contain;
+}
+
+.line {
+  margin: 0;
+  // 输出是对齐过的，必须保留空格
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: color-mix(in srgb, var(--c-ink) 82%, transparent);
+  text-decoration: none;
+  display: block;
+
+  &[data-tone='dim'] {
+    color: color-mix(in srgb, var(--c-dim) 85%, transparent);
+  }
+
+  &[data-tone='signal'] {
+    color: @signal;
+  }
+
+  &[data-tone='ember'] {
+    color: @ember;
+  }
+}
+
+.line[data-streaming='true']::after {
+  content: '';
+  display: inline-block;
+  width: 0.56em;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: -0.16em;
+  background: @signal;
+  animation: stream-cursor 0.9s steps(1, end) infinite;
+}
+
+@keyframes stream-cursor {
+  50% {
+    opacity: 0;
+  }
+}
+
+a.line:hover {
+  text-decoration: underline;
+}
+
+.prompt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 20px 14px;
+}
+
+.sigil {
+  color: @signal;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  font: inherit;
+  color: color-mix(in srgb, var(--c-ink) 95%, transparent);
+  caret-color: @signal;
+
+  &::placeholder {
+    color: color-mix(in srgb, var(--c-dim) 55%, transparent);
+  }
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 20px 16px;
+}
+
+// 不想打字的人也能把简历读完
+.chip {
+  padding: 4px 10px;
+  font: inherit;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  color: color-mix(in srgb, var(--c-dim) 95%, transparent);
+  background: none;
+  border: 1px solid color-mix(in srgb, var(--c-accent) 16%, transparent);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: color 180ms ease, border-color 180ms ease;
+
+  &:hover {
+    color: @signal;
+    border-color: color-mix(in srgb, var(--c-accent) 50%, transparent);
+  }
+}
+
+@media (max-width: 720px) {
+  .shell {
+    font-size: 11.5px;
+  }
+
+  .log {
+    max-height: 42vh;
+    padding: 12px 14px 4px;
+  }
+
+  .prompt,
+  .chips {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}

@@ -1,0 +1,202 @@
+@mono: var(--font-mono);
+
+.hud {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+  font-family: @mono;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: color-mix(in srgb, var(--c-ink) 68%, transparent);
+  text-transform: uppercase;
+}
+
+.corner {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  &[data-pos='tl'] {
+    top: 30px;
+    left: 32px;
+  }
+
+  &[data-pos='tr'] {
+    top: 30px;
+    right: 32px;
+    align-items: flex-end;
+  }
+}
+
+.name {
+  color: color-mix(in srgb, var(--c-ink) 92%, transparent);
+  letter-spacing: 0.24em;
+}
+
+.sub {
+  color: color-mix(in srgb, var(--c-dim) 90%, transparent);
+  font-size: 10px;
+}
+
+.clock {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.clockLabel {
+  color: color-mix(in srgb, var(--c-dim) 90%, transparent);
+  font-size: 10px;
+}
+
+.clockValue {
+  color: var(--c-accent);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  // 数字每帧都在跳，等宽字形才不会让读数左右抖
+  font-variant-numeric: tabular-nums;
+}
+
+.track {
+  width: 96px;
+  height: 1px;
+  background: color-mix(in srgb, var(--c-accent) 18%, transparent);
+  overflow: hidden;
+}
+
+.fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--c-accent);
+  transform-origin: right center;
+}
+
+.clockState {
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  color: color-mix(in srgb, var(--c-dim) 85%, transparent);
+  transition: color 180ms ease;
+
+  &[data-frozen='true'] {
+    color: var(--c-accent);
+  }
+}
+
+// 仪表层整体 pointer-events: none，开关得自己把事件收回来
+.theme {
+  margin-top: 4px;
+  padding: 3px 9px;
+  pointer-events: auto;
+  font: inherit;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--c-dim) 95%, transparent);
+  background: none;
+  border: 1px solid var(--c-line);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: color 180ms ease, border-color 180ms ease;
+
+  &:hover {
+    color: var(--c-accent);
+    border-color: color-mix(in srgb, var(--c-accent) 55%, transparent);
+  }
+}
+
+.rail {
+  position: absolute;
+  left: 32px;
+  bottom: 34px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.step {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 10px;
+  color: color-mix(in srgb, var(--c-dim) 55%, transparent);
+  transition: color 240ms ease, opacity 240ms ease;
+
+  &[data-active='true'] {
+    color: color-mix(in srgb, var(--c-ink) 95%, transparent);
+
+    .stepIndex {
+      color: var(--c-accent);
+    }
+
+    // 当前章节拉出一条短横线，像磁带上的播放头
+    .stepLabel::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.stepIndex {
+  color: color-mix(in srgb, var(--c-dim) 50%, transparent);
+}
+
+.stepLabel {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: calc(100% + 10px);
+    top: 50%;
+    width: 26px;
+    height: 1px;
+    background: var(--c-accent);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+.cue {
+  position: absolute;
+  right: 32px;
+  bottom: 34px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  color: color-mix(in srgb, var(--c-ink) 70%, transparent);
+}
+
+.arrow {
+  animation: nudge 1.9s ease-in-out infinite;
+}
+
+.skip {
+  color: color-mix(in srgb, var(--c-dim) 80%, transparent);
+}
+
+@keyframes nudge {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(4px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 720px) {
+  .rail,
+  .corner[data-pos='tr'] .track {
+    display: none;
+  }
+}

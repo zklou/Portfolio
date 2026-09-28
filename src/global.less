@@ -1,0 +1,47 @@
+:root {
+  // 这些值由 theme.ts 的 applyThemeVars 在挂载时写入；
+  // 这里的默认值只是首帧的兜底，别当成配色的出处。
+  --c-bg: #0c0a09;
+  --c-ink: #f0ece6;
+  --c-dim: #7a736b;
+  --c-accent: #f2903a;
+  --c-line: rgba(240, 236, 230, 14%);
+  --c-panel: rgba(12, 10, 9, 78%);
+  --c-scrim: rgba(12, 10, 9, 90%);
+  --font-mono: ui-monospace, sfmono-regular, 'SF Mono', menlo, consolas,
+    monospace;
+  // 学术感靠衬线立起来，正文衬线也更耐读
+  --font-serif: 'Iowan Old Style', 'Palatino Linotype', palatino,
+    'Source Serif 4', georgia, 'Songti SC', serif;
+  --font-sans: -apple-system, blinkmacsystemfont, 'Helvetica Neue',
+    'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--c-bg);
+  color: var(--c-ink);
+  // Lenis 接管滚动，浏览器自带的平滑滚动会和它打架
+  scroll-behavior: auto;
+  transition: background-color 400ms ease;
+}
+
+body {
+  overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  isolation: isolate;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--c-accent) 32%, transparent);
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}

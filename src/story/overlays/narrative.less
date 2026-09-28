@@ -1,0 +1,195 @@
+@mono: var(--font-mono);
+@sans: var(--font-sans);
+
+.layer {
+  position: fixed;
+  inset: 0;
+  z-index: 15;
+  pointer-events: none;
+  font-family: var(--font-serif);
+}
+
+.kicker {
+  display: block;
+  margin: 0;
+  // 解码时未到位的字符是空格，宽度不能塌
+  white-space: pre;
+  font-family: @mono;
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--c-accent) 80%, transparent);
+}
+
+.arrival {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  width: min(640px, 82vw);
+  // 居中靠 -50% 完成，入场位移由 JS 叠在同一个 translate3d 里
+  transform: translate3d(-50%, -50%, 0);
+  text-align: center;
+  opacity: 0;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(34px, 5.6vw, 66px);
+  font-weight: 400;
+  // 宽字距的大写衬线 —— 既是死亡搁浅的标题卡，也是旧书扉页的做法
+  letter-spacing: 0.22em;
+  // 字距会在行尾多出一格，居中时要补回来
+  text-indent: 0.22em;
+  text-transform: uppercase;
+  line-height: 1.22;
+  color: var(--c-ink);
+}
+
+.titleLine {
+  display: block;
+}
+
+// 每个字母底下垂一根雨丝。不是下划线 —— 是一滴水正把线往下拖：
+// 底端最实（那是水头），拖尾往上淡掉。每个字母的时长和起始各不相同。
+.glyph {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 88%;
+    width: 1.6px;
+    // 静止基态：动画没跑（或者访客关了动效）时仍然垂着一根，
+    // 死亡搁浅那个样子本来就不依赖动画。动画只是让雨把它拉出来。
+    height: calc(var(--thread) * var(--thread-scale, 1) * 0.5);
+    opacity: 0.42;
+    // 底端最实 —— 那是正在往下走的水头，拖尾往上淡掉。
+    // 不用 color-mix(currentColor)：真出问题的话整条渐变失效，线就没了
+    background: linear-gradient(to bottom, transparent 0%, currentcolor 88%);
+    pointer-events: none;
+    animation: drip var(--dur, 3s) cubic-bezier(0.32, 0, 0.67, 0)
+      var(--delay, 0s) infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &::after {
+      animation: none;
+    }
+  }
+}
+
+@keyframes drip {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 0.72;
+  }
+
+  62% {
+    height: calc(var(--thread) * var(--thread-scale, 1));
+    opacity: 0.62;
+  }
+
+  100% {
+    height: calc(var(--thread) * var(--thread-scale, 1));
+    opacity: 0;
+  }
+}
+
+.lede {
+  margin: 6px 0 22px;
+  font-family: @mono;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--c-dim) 95%, transparent);
+}
+
+.caption {
+  position: absolute;
+  left: 32px;
+  bottom: 190px;
+  width: min(430px, 76vw);
+  display: block;
+  opacity: 0;
+  text-decoration: none;
+  color: inherit;
+
+  // 文案会压在展板的亮部上，自带一块比自己大一圈的压暗才读得清
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -40px -120px -40px -60px;
+    z-index: -1;
+    background: radial-gradient(
+      ellipse at 30% 50%,
+      color-mix(in srgb, var(--c-bg) 92%, transparent) 0%,
+      color-mix(in srgb, var(--c-bg) 72%, transparent) 45%,
+      transparent 78%
+    );
+    pointer-events: none;
+  }
+}
+
+.meta {
+  display: block;
+  white-space: pre;
+  font-family: @mono;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--c-accent) 85%, transparent);
+}
+
+.projectTitle {
+  // 衬线做逐字解码会左右抖动，改成从左擦出来 + 轻微对焦
+  clip-path: inset(0 100% 0 0);
+  filter: blur(6px);
+  transition: clip-path 900ms cubic-bezier(0.16, 1, 0.3, 1), filter 700ms ease;
+
+  &[data-reveal='true'] {
+    clip-path: inset(0 0 0 0);
+    filter: blur(0);
+  }
+
+  margin: 12px 0 10px;
+  font-family: var(--font-serif);
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 400;
+  letter-spacing: -0.008em;
+  line-height: 1.1;
+  color: var(--c-ink);
+}
+
+.desc {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.72;
+  color: color-mix(in srgb, var(--c-ink) 72%, transparent);
+}
+
+.open {
+  font-family: @mono;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--c-accent);
+  border-bottom: 1px solid color-mix(in srgb, var(--c-accent) 35%, transparent);
+  padding-bottom: 3px;
+  transition: border-color 220ms ease;
+
+  .caption:hover & {
+    border-color: var(--c-accent);
+  }
+}
+
+@media (max-width: 720px) {
+  .caption {
+    bottom: 86px;
+  }
+}

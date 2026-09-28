@@ -1,34 +1,22 @@
 import { defineConfig } from '@umijs/max';
 
 export default defineConfig({
-  antd: {},
-  access: {},
-  model: {},
-  initialState: {},
-  request: {},
-  layout: {
-    title: '@umijs/max',
-  },
+  title: 'Zhengkun Lou — CS PhD Student',
+  base: process.env.NODE_ENV === 'production' ? '/Portfolio/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/Portfolio/' : '/',
+  metas: [
+    {
+      name: 'description',
+      content:
+        'Zhengkun Lou — CS PhD student at Georgia Tech. Research in LLM interpretability and spatio-temporal vision, told through a scroll-driven portfolio.',
+    },
+    { name: 'theme-color', content: '#0c0a09' },
+  ],
   routes: [
     {
       path: '/',
-      redirect: '/home',
-    },
-    {
-      name: '首页',
-      path: '/home',
-      component: './Home',
+      component: './Story',
       layout: false,
-    },
-    {
-      name: '权限演示',
-      path: '/access',
-      component: './Access',
-    },
-    {
-      name: ' CRUD 示例',
-      path: '/table',
-      component: './Table',
     },
   ],
   npmClient: 'yarn',
